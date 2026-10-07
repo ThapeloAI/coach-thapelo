@@ -1,0 +1,1561 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Coach Thapelo: UEFA C licensed community football coach in Luton, working across Bedfordshire, Hertfordshire and north London. Schools, community groups, clubs and 1-to-1 coaching.">
+<meta property="og:title" content="Coach Thapelo | Community football coach">
+<meta property="og:description" content="Every player. Every place. Progress. UEFA C licensed, FA registered, Enhanced DBS.">
+<meta property="og:image" content="img/cdp-kit.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.webp">
+<title>Coach Thapelo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{color-scheme:light;--navy:#0D0F24;--navy-deep:#070817;--red:#DF4233;--red-light:#f05243;--chalk:#EDECEE;--blue:#0D5BDA;--blue-soft:#679AD6;--ink:#16182d;--line:rgba(13,15,36,.14);--display:'Barlow Condensed',Impact,"Arial Narrow",sans-serif;--body:'Inter',system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--navy);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.section{position:relative;overflow:hidden}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--blue-soft);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+.site-header{height:76px;position:fixed;z-index:40;top:env(safe-area-inset-top,0px);left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:10px max(20px,calc((100vw - 1180px)/2));color:#fff;transition:.3s ease}
+.site-header.scrolled{height:64px;background:rgba(7,8,23,.96);box-shadow:0 7px 22px rgba(0,0,0,.2)}
+.brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-family:var(--display);font-size:25px;font-weight:700;letter-spacing:.03em}
+.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;background:#fff}
+.nav-panel{display:flex;align-items:center;gap:25px}
+.nav-panel a{color:#fff;text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.09em}
+.nav-panel a:not(.nav-cta):hover{color:var(--blue-soft)}
+.nav-cta{background:var(--red);padding:11px 15px!important}.nav-cta span{margin-left:7px}
+@media(max-width:1100px) and (min-width:801px){.nav-panel{gap:15px}.brand span{display:none}}
+.menu-toggle{display:none;color:#fff;background:none;border:0;font-family:var(--body);font-weight:700;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.menu-toggle span{display:block;width:23px;height:2px;margin:4px;background:currentColor}.menu-toggle b{font-size:10px}
+
+/* type + buttons */
+.eyebrow{margin:0 0 15px;color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;line-height:1.4;text-transform:uppercase}
+.eyebrow i{display:inline-block;width:22px;height:2px;margin:0 9px 3px;background:var(--red)}
+.eyebrow.blue{color:var(--blue)}
+h1,h2,h3,h4,p{margin-top:0}
+h1,h2,h3,h4{font-family:var(--display);line-height:.94}
+h1{max-width:680px;margin-bottom:21px;font-size:clamp(64px,10vw,142px);font-weight:800;letter-spacing:-.035em;text-transform:uppercase}
+h1 em,h2 em{color:var(--red);font-style:normal}
+.lead{font-size:20px;line-height:1.45}
+.button-row{display:flex;gap:12px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:50px;padding:12px 19px;border:1px solid transparent;color:#fff;font:700 12px/1.2 var(--body);letter-spacing:.07em;text-decoration:none;text-transform:uppercase;transition:.2s ease;cursor:pointer;background:none}
+.button:hover{transform:translateY(-2px)}
+.button-primary{background:var(--red)}.button-primary:hover{background:var(--red-light)}
+.button-ghost{border-color:rgba(255,255,255,.65)}.button-ghost:hover{background:#fff;color:var(--navy)}
+.button-dark{background:var(--navy)}
+.button-line{border-color:var(--line);color:var(--navy)}.button-line:hover{background:var(--navy);color:#fff}
+.button-sm{min-height:38px;padding:8px 13px;gap:10px;font-size:11px}
+.button[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.text-link{display:inline-block;margin-top:13px;color:var(--blue);font-size:13px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.07em;background:none;border:0;padding:0;cursor:pointer}
+.text-link span{margin-left:8px}
+
+/* HERO SLIDER */
+.hero{min-height:720px;height:min(100svh,920px);display:flex;align-items:center;background:var(--navy);color:#fff}
+.hero-art{position:absolute;inset:0}
+.hero-art figure{position:absolute;top:0;right:0;bottom:0;width:62%;margin:0;opacity:0;transition:opacity 1.1s ease}
+.hero-art figure.on{opacity:1}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+.hero-art figure.on img{animation:slowZoom 9s ease-out both}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,23,1) 0%,rgba(7,8,23,.97) 38%,rgba(7,8,23,.35) 62%,rgba(7,8,23,.1) 85%),linear-gradient(0deg,rgba(7,8,23,.85),transparent 35%)}
+.hero-content{position:relative;padding-top:60px;padding-bottom:110px;width:min(1180px,calc(100% - 40px))}
+.slides{display:grid}
+.slide{grid-area:1/1;visibility:hidden;opacity:0;transition:opacity .5s ease,visibility 0s .5s}
+.slide.on{visibility:visible;opacity:1;transition:opacity .5s ease}
+.slide h1 .ln{display:block;overflow:hidden}
+.slide h1 .ln>span{display:inline-block;transform:translateY(102%);transition:transform .85s cubic-bezier(.2,.7,.1,1)}
+.slide.on h1 .ln>span{transform:none}
+.slide.on h1 .ln:nth-child(2)>span{transition-delay:.08s}.slide.on h1 .ln:nth-child(3)>span{transition-delay:.16s}
+.hero-copy{max-width:510px;margin-bottom:29px;font-size:17px;line-height:1.65}
+.slider-ui{display:flex;align-items:center;gap:18px;margin-top:34px}
+.dots{display:flex;gap:8px}
+.dot{width:54px;height:24px;border:0;padding:0;background:none;cursor:pointer;display:grid;align-content:center}
+.dot i{display:block;height:3px;background:rgba(255,255,255,.28);overflow:hidden}
+.dot i::after{content:"";display:block;height:100%;width:0;background:var(--red)}
+.dot.on i::after{animation:fill var(--dur,7s) linear forwards}
+.dot.done i::after{width:100%}
+.hero.paused .dot.on i::after{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.count{font:700 15px var(--display);letter-spacing:.08em;color:rgba(255,255,255,.7)}
+.count b{color:#fff}
+.arw{width:40px;height:40px;border:1px solid rgba(255,255,255,.45);background:none;color:#fff;cursor:pointer;font-size:16px}
+.arw:hover{background:#fff;color:var(--navy)}
+.hero-proof{position:absolute;z-index:1;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.24)}
+.hero-proof div{min-height:78px;display:flex;justify-content:center;flex-direction:column;padding:13px 19px;border-right:1px solid rgba(255,255,255,.24)}
+.hero-proof strong{font-family:var(--display);font-size:22px;line-height:1;text-transform:uppercase}
+.hero-proof span{font-size:10px;color:rgba(255,255,255,.76);text-transform:uppercase;letter-spacing:.07em}
+
+/* ticker */
+.ticker{background:var(--red);color:#fff;overflow:hidden;border-bottom:1px solid rgba(0,0,0,.1)}
+.ticker .track{display:flex;width:max-content;animation:marq 42s linear infinite}
+.ticker span{font:700 22px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;padding:17px 0;white-space:nowrap;display:inline-flex;align-items:center}
+.ticker span::after{content:"";width:8px;height:8px;background:var(--navy);margin:0 24px;transform:rotate(45deg)}
+.ticker.navy{background:var(--navy-deep)}
+.ticker.navy .track{animation-direction:reverse;animation-duration:60s}
+.ticker.navy span{font-size:clamp(44px,7vw,92px);font-weight:800;padding:22px 0;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.4)}
+.ticker.navy span:nth-child(even){color:#fff;-webkit-text-stroke:0}
+.ticker.navy span::after{background:var(--red);width:14px;height:14px;margin:0 34px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* proposition */
+.light-section{background:var(--chalk)}
+.proposition{padding:110px 0}
+.split-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:100px;align-items:center}
+.section-intro h2,.credentials-heading h2,.method-copy h2,.media-copy h2,.one-copy h2{max-width:600px;margin-bottom:22px;font-size:clamp(43px,5.2vw,70px);font-weight:700;letter-spacing:-.02em}
+.section-intro>p:not(.eyebrow){max-width:540px}
+.service-stack{border-top:1px solid var(--line)}
+.service-card{display:grid;grid-template-columns:48px 1fr 20px;gap:14px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:padding .25s ease}
+.service-card:hover{padding-left:10px}
+.service-number{color:var(--red);font:700 21px var(--display)}
+.service-card h3{margin:0 0 3px;font-size:30px}.service-card p{margin:0;font-size:14px}
+.arrow{color:var(--blue);font-size:19px}
+
+/* 1-to-1 */
+.one{padding:105px 0;background:var(--navy-deep);color:#fff}
+.one-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
+.one-image{position:sticky;top:100px;background:var(--navy);aspect-ratio:376/573;max-height:640px}
+.one-image img{width:100%;height:100%;object-fit:cover}
+.image-label{position:absolute;bottom:0;left:0;padding:12px 17px;background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.image-label span{color:var(--red);margin-left:8px}
+.one-badge{position:absolute;top:22px;right:-18px;background:var(--red);color:#fff;font:800 26px/1 var(--display);text-transform:uppercase;padding:12px 16px;letter-spacing:.02em}
+.one-copy .lead{color:#fff}.one-copy>p:not(.eyebrow):not(.lead){color:#c3cae1}
+.focus-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.2);border-left:1px solid rgba(255,255,255,.2);margin:34px 0}
+.focus-grid div{padding:16px;border-right:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);transition:background .2s}
+.focus-grid div:hover{background:rgba(223,66,51,.12)}
+.focus-grid b{display:block;font:600 21px/1 var(--display);margin-bottom:6px}
+.focus-grid span{color:#aeb7d0;font-size:12px;line-height:1.45;display:block}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.25);margin-bottom:34px}
+.formats article{padding:20px 18px 20px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.formats article+article{padding-left:18px;border-left:1px solid rgba(255,255,255,.15)}
+.formats .k{color:var(--red-light);font:700 12px var(--body);letter-spacing:.09em;text-transform:uppercase}
+.formats h3{font-size:30px;margin:10px 0 8px}
+.formats p{margin:0;color:#c3cae1;font-size:13px}
+.steps{border-top:1px solid rgba(255,255,255,.25);margin-bottom:34px}
+.steps>div{display:grid;grid-template-columns:60px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.steps span{color:var(--red-light);font:700 21px var(--display)}
+.steps b{font:600 22px var(--display);display:block;line-height:1.1}
+.steps p{margin:2px 0 0;color:#c3cae1;font-size:13px}
+.fine{color:#aeb7d0;font-size:12px;margin:16px 0 0}
+
+/* credentials */
+.credentials{padding:94px 0;background:var(--navy);color:#fff}
+.credentials-heading{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:25px;align-items:end;margin-bottom:43px}
+.credentials-heading h2{margin:0;font-size:52px}
+.credentials-heading p:last-child{margin:0;color:rgba(255,255,255,.67);font-size:13px}
+.credential-grid{display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid rgba(255,255,255,.2)}
+.credential-grid article{min-height:173px;padding:20px;border-right:1px solid rgba(255,255,255,.2)}
+.credential-grid article:first-child{border-left:1px solid rgba(255,255,255,.2)}
+.credential-mark{display:flex;align-items:center;justify-content:center;width:35px;height:35px;margin-bottom:24px;border:1px solid var(--blue-soft);border-radius:50%;color:var(--blue-soft);font:700 12px var(--body)}
+.credential-grid h3{margin-bottom:5px;font-size:24px}
+.credential-grid p{margin:0;color:#aeb7d0;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.credential-note{margin:20px 0 0;color:#aeb7d0;font-size:12px}
+.compliance-table-wrap,.coaching-record{margin-top:72px;padding-top:30px;border-top:1px solid rgba(255,255,255,.2)}
+.table-heading,.record-heading{display:grid;grid-template-columns:1fr .7fr;gap:30px;align-items:end;margin-bottom:23px}
+.table-heading h3,.record-heading h3{margin:0;font-size:40px}
+.table-heading>p,.record-heading>p{margin:0;color:#aeb7d0;font-size:12px}
+.table-heading .eyebrow,.record-heading .eyebrow{margin-bottom:6px}
+.table-scroll{overflow-x:auto;border:1px solid rgba(255,255,255,.2)}
+.credentials-table{width:100%;min-width:780px;border-collapse:collapse;text-align:left}
+.credentials-table th{padding:0;background:rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.2)}
+.credentials-table th button{width:100%;padding:14px 18px;border:0;background:transparent;color:var(--blue-soft);font:700 10px var(--body);letter-spacing:.09em;text-align:left;text-transform:uppercase;cursor:pointer}
+.credentials-table th button:hover{color:#fff}.credentials-table th span{margin-left:5px}
+.credentials-table td{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.14);color:#d6dced;font-size:13px}
+.credentials-table td:first-child{width:34%;color:#fff;font:600 21px/1.1 var(--display)}
+.credentials-table td:nth-child(3){white-space:nowrap}
+.credentials-table tbody tr:last-child td{border-bottom:0}
+.status{display:inline-block;padding:3px 7px;border:1px solid rgba(103,154,214,.7);color:#c9d9f1;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.status-held{border-color:rgba(223,66,51,.8);color:#ffc7c1}
+.status-current{border-color:rgba(103,154,214,.8)}
+.status-renew{border-color:rgba(255,255,255,.42);color:#fff}
+.status-done{border-color:rgba(255,255,255,.2);color:#aeb7d0}
+.next-step{margin:15px 0 0;color:#aeb7d0;font-size:13px}.next-step strong{color:#fff}
+.record-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.2);border-left:1px solid rgba(255,255,255,.2)}
+.record-feature{min-height:210px;padding:24px;border-right:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}
+.record-number{display:block;margin-bottom:20px;color:var(--red-light);font:700 20px var(--display)}
+.record-feature h3{margin-bottom:10px;font-size:29px}
+.record-feature p{margin:0;color:#d6dced;font-size:13px}
+.record-feature .record-note{margin-top:15px;color:#aeb7d0;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.experience-list{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(255,255,255,.2)}
+.experience-list>div{display:flex;gap:10px;min-height:92px;padding:18px;border-right:1px solid rgba(255,255,255,.2)}
+.experience-list>div:first-child{border-left:1px solid rgba(255,255,255,.2)}
+.experience-list span{color:var(--blue-soft);font:700 15px var(--display)}
+.experience-list p{margin:0;color:#d6dced;font-size:12px;line-height:1.45}
+.experience-list.three{grid-template-columns:repeat(3,1fr);border-bottom:0}
+.experience-list.three>div{border-bottom:1px solid rgba(255,255,255,.2)}
+.experience-list.three>div:nth-child(3n+1){border-left:1px solid rgba(255,255,255,.2)}
+.prog-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start;margin-bottom:56px}
+.prog-photos{position:relative;padding:0 60px 60px 0}
+.prog-photos figure{margin:0;position:relative;background:var(--navy-deep)}
+.prog-photos img{width:100%;height:100%;object-fit:cover}
+.prog-main{aspect-ratio:4/5}
+.prog-inset{position:absolute!important;right:0;bottom:0;width:52%;aspect-ratio:1/1;border:6px solid var(--navy)}
+.prog-inset .image-label{font-size:9px;padding:8px 10px}
+.prog-account .eyebrow{margin-bottom:10px}
+.prog-list{border-top:1px solid rgba(255,255,255,.2)}
+.prog-list>div{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.prog-list span{color:var(--red-light);font:700 18px var(--display);min-width:24px}
+.prog-list p{margin:0;color:#d6dced;font-size:14px}
+.prog-list strong{display:block;color:#fff;font:600 23px/1.1 var(--display);margin-bottom:3px}
+@media(max-width:900px){.prog-grid{grid-template-columns:1fr;gap:40px}.prog-photos{max-width:460px;padding:0 40px 40px 0}}
+.members{display:flex;flex-wrap:wrap;gap:7px;margin-top:26px}
+.members span{padding:6px 8px;border:1px solid rgba(255,255,255,.28);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+
+/* philosophy */
+.philosophy{padding:120px 0 103px}
+.quote{max-width:1000px;margin:0 0 67px;font-size:clamp(48px,6.5vw,91px);letter-spacing:-.027em}
+.principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.principle-grid article{padding-top:17px;border-top:3px solid var(--navy)}
+.principle-grid span{color:var(--red);font:700 19px var(--display)}
+.principle-grid h3{margin:18px 0 8px;font-size:30px}
+.principle-grid p{max-width:300px;margin:0;font-size:14px}
+
+/* audience */
+.who{padding:0 0 110px}
+.tabs{display:flex;gap:0;border:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tab{flex:1 0 auto;background:transparent;border:0;border-right:1px solid var(--line);padding:16px 18px;font:700 11px var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--navy);cursor:pointer}
+.tab:last-child{border-right:0}
+.tab[aria-selected="true"]{background:var(--navy);color:#fff}
+.aud{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;margin-top:40px}
+.aud h3{font-size:clamp(34px,4vw,52px);margin:0 0 18px;letter-spacing:-.01em}
+.proof{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.proof li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof li::before{content:"↗";color:var(--red);font-weight:700}
+.aud-side{background:#fff;padding:24px;box-shadow:10px 10px 0 var(--navy);align-self:start}
+.aud-side h4{font-size:26px;margin:0 0 14px}
+.chips{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.chip{background:none;border:0;border-bottom:1px solid var(--line);padding:12px 0;text-align:left;font:500 14px/1.4 var(--body);color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.chip::after{content:"→";color:var(--blue);font-weight:700}
+.chip:hover{color:var(--blue)}
+
+/* media / story */
+.media{padding:105px 0}
+.media-layout{display:grid;grid-template-columns:1fr .9fr;gap:79px;align-items:center}
+.media-image{position:relative;min-height:560px;background:var(--navy)}
+.media-image img{width:100%;height:100%;position:absolute;object-fit:cover;filter:saturate(.8) contrast(1.05)}
+.media-inset{position:absolute;right:-30px;bottom:-30px;width:44%;aspect-ratio:4/3;border:6px solid var(--chalk);background:var(--navy)}
+.media-inset img{position:static;width:100%;height:100%;object-fit:cover}
+.capability-list{margin:28px 0}
+.capability-list>div{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+.capability-list>div:last-child{border-bottom:1px solid var(--line)}
+.capability-list span{color:var(--red);font-weight:bold}
+.capability-list p{margin:0;font-size:13px}
+.capability-list strong{display:block;font-family:var(--display);font-size:20px}
+
+/* method + lab */
+.method{padding:105px 0;background:var(--navy-deep);color:#fff}
+.method-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:start}
+.method-copy{position:sticky;top:100px}
+.method-copy .lead{color:#fff}.method-copy>p:not(.eyebrow){color:#c3cae1}
+.timeline{border-top:1px solid rgba(255,255,255,.25)}
+.timeline-head,.timeline>.row{display:grid;grid-template-columns:1.1fr .45fr 1.4fr;gap:12px;align-items:center}
+.timeline-head{padding:11px 16px;color:var(--blue-soft);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.timeline>.row{min-height:68px;padding:12px 16px;border-top:1px solid rgba(255,255,255,.15)}
+.timeline b{font:600 21px/1.05 var(--display)}
+.timeline time{color:var(--red-light);font-size:12px;font-weight:700}
+.timeline p{margin:0;color:#c3cae1;font-size:13px}
+.timeline .cp{display:block;margin-top:4px;color:#fff;font-size:12px;font-weight:600}
+.timeline .cp::before{content:"Coaching point: ";color:var(--blue-soft);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.plan-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;align-items:end;margin-bottom:14px}
+.plan-top h3{font-size:34px;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{padding:3px 7px;border:1px solid rgba(103,154,214,.7);color:#c9d9f1;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.tags .ex{border-color:rgba(223,66,51,.8);color:#ffc7c1}
+.bar{display:flex;gap:2px;margin:0 0 14px}
+.bar span{height:6px;background:rgba(255,255,255,.2)}.bar span:first-child{background:var(--red)}
+.plan-note{margin:14px 0 0;color:#aeb7d0;font-size:13px}
+.plan-note strong{color:#fff}
+.lab{margin-top:72px;padding-top:30px;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:start}
+.lab-form{padding:28px;background:var(--chalk);color:var(--navy);box-shadow:14px 14px 0 var(--red)}
+.lab-form h3{font-size:32px;margin-bottom:5px}.lab-form>p{font-size:12px;line-height:1.5;margin:0}
+.lab-form label,.enquiry-form label{display:block;margin-top:13px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.lab-form input,.lab-form select,.lab-form textarea,.enquiry-form input,.enquiry-form select,.enquiry-form textarea{display:block;width:100%;margin-top:4px;padding:9px 0;border:0;border-bottom:1px solid var(--line);outline:0;background:transparent;color:var(--navy);font:14px var(--body);border-radius:0}
+.lab-form input:focus,.lab-form select:focus,.lab-form textarea:focus,.enquiry-form input:focus,.enquiry-form select:focus,.enquiry-form textarea:focus{border-color:var(--blue)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--navy);margin-top:16px}
+.seg button{border:0;background:none;padding:10px 6px;line-height:1.25;font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--navy)}
+.seg button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.lab-form .button,.enquiry-form .button{width:100%;margin-top:22px}
+.form-status{min-height:18px;margin:9px 0 0;font-size:12px}
+.working{display:flex;gap:12px;align-items:center;padding:22px 16px;border-top:1px solid rgba(255,255,255,.25);color:#c3cae1}
+.pulse{width:9px;height:9px;background:var(--red);animation:pulse 1s ease-in-out infinite;flex:none}
+@keyframes pulse{50%{opacity:.2}}
+
+/* contact */
+.contact{padding-top:100px;background:var(--red);color:#fff}
+.contact-art{position:absolute;inset:0;opacity:.12}
+.contact-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--red),rgba(223,66,51,.75))}
+.contact-art img{width:100%;height:100%;object-fit:cover}
+.contact-grid{position:relative;display:grid;grid-template-columns:1fr .85fr;gap:80px;padding-bottom:92px}
+.contact h2{margin-bottom:22px;font-size:clamp(52px,6vw,82px);letter-spacing:-.025em}
+.contact h2 em{color:var(--navy)}
+.contact .lead{max-width:580px}
+.contact-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:29px}
+.contact-points span{padding:5px 8px;border:1px solid rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.direct{margin-top:34px;border-top:1px solid rgba(255,255,255,.45)}
+.direct>div{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.45)}
+.direct small{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.direct strong{font:700 clamp(22px,2.6vw,30px)/1.1 var(--display);letter-spacing:.01em;user-select:all;overflow-wrap:anywhere;grid-column:1}
+.direct .acts{grid-column:2;grid-row:1/span 2;display:flex;gap:6px}
+.direct .button{border-color:rgba(255,255,255,.7)}
+.direct .button:hover{background:#fff;color:var(--red)}
+.enquiry-form{padding:28px;background:var(--chalk);color:var(--navy);box-shadow:14px 14px 0 var(--navy)}
+.form-heading h3{margin-bottom:5px;font-size:32px}.form-heading p{font-size:12px;line-height:1.5}
+.btn-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn-pair .button{margin-top:22px}
+.draft{margin-top:22px;padding-top:16px;border-top:3px solid var(--navy)}
+.draft textarea{min-height:170px;border:1px solid var(--line)!important;padding:10px!important;font-size:13px!important;line-height:1.55}
+.draft .btn-pair .button{margin-top:10px}
+
+/* footer */
+.site-footer{position:relative;padding:53px 0 17px;background:var(--navy-deep);color:#fff}
+.footer-grid{display:grid;grid-template-columns:1.1fr .55fr .9fr .8fr;gap:30px;padding-bottom:44px}
+.footer-brand img{width:88px;height:88px;object-fit:cover;border-radius:50%;background:#fff}
+.footer-grid p{font-size:13px}
+.footer-grid a:not(.footer-brand){display:block;margin:5px 0;color:#fff;font-size:12px;text-decoration:none}
+.footer-label{margin-bottom:9px!important;color:var(--blue-soft);font-size:10px!important;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.footer-badges{display:flex;align-content:flex-start;flex-wrap:wrap;gap:7px}
+.footer-badges span{padding:6px;border:1px solid rgba(255,255,255,.28);font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.legal{display:flex;justify-content:space-between;gap:15px;padding-top:15px;border-top:1px solid rgba(255,255,255,.17);color:#aeb7d0;font-size:10px}
+.legal a{color:#aeb7d0}
+
+/* assistant */
+.fab{position:fixed;z-index:60;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;padding:6px 16px 6px 6px;background:var(--navy-deep);color:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:8px 8px 0 var(--red);cursor:pointer;font:700 11px var(--body);letter-spacing:.09em;text-transform:uppercase;transition:transform .2s}
+.fab:hover{transform:translate(-2px,-2px)}
+.fab img{width:38px;height:38px;border-radius:50%;background:#fff}
+.fab i{width:8px;height:8px;background:#6b7080}.fab i.on{background:#3FCF7A}
+.dock{position:fixed;z-index:70;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:min(420px,calc(100vw - 36px));height:min(620px,calc(100vh - 110px));background:var(--chalk);color:var(--navy);display:flex;flex-direction:column;box-shadow:14px 14px 0 var(--navy);border:1px solid var(--navy);animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(12px)}}
+.dock-head{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--navy-deep);color:#fff}
+.dock-head img{width:38px;height:38px;border-radius:50%;background:#fff}
+.dock-head div{flex:1;display:grid}
+.dock-head b{font:700 21px/1 var(--display);text-transform:uppercase}
+.dock-head small{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#aeb7d0}
+.x{width:34px;height:34px;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;cursor:pointer}
+.log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:10px 13px;white-space:pre-wrap;font-size:14px;line-height:1.55;overflow-wrap:anywhere}
+.msg.bot{background:#fff;align-self:flex-start;border-left:3px solid var(--blue)}
+.msg.me{background:var(--navy);color:#fff;align-self:flex-end}
+.msg.act{align-self:flex-start;border:1px dashed var(--red);color:var(--red);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 9px}
+.dock .chips{padding:0 16px 8px;border:0}
+.dock .chip{font-size:13px;padding:9px 0}
+.dock form{display:flex;border-top:1px solid var(--navy)}
+.dock input{flex:1;min-width:0;border:0;padding:14px;font:14px var(--body);background:#fff;color:var(--navy);outline:0}
+.send{border:0;background:var(--red);color:#fff;padding:0 18px;font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.send[disabled],.dock input[disabled]{opacity:.5;cursor:not-allowed}
+.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--navy-deep);color:#fff;padding:11px 16px;font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;z-index:80;box-shadow:6px 6px 0 var(--red)}
+
+@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .one-layout,.lab,.aud{grid-template-columns:1fr;gap:45px}
+  .one-image{position:relative;top:0;max-width:420px}
+  .one-badge{right:10px}
+  .focus-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:800px){
+  .site-header{height:68px}.brand span{font-size:21px}.brand img{width:43px;height:43px}
+  .menu-toggle{display:block;z-index:2;padding:5px}
+  .nav-panel{position:fixed;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:21px;padding:88px 31px;background:var(--navy-deep);transform:translateX(100%);transition:transform .3s ease}
+  .nav-panel.open{transform:none}
+  .nav-panel a{font:600 40px var(--display);letter-spacing:.02em}
+  .nav-panel .nav-cta{margin-top:14px;padding:14px 19px!important;font:700 14px var(--body);letter-spacing:.08em}
+  .hero{min-height:720px;height:auto}
+  .hero-art figure{width:100%}
+  .hero-art img{object-position:60% 20%}
+  .hero-overlay{background:linear-gradient(90deg,rgba(7,8,23,.9),rgba(7,8,23,.55)),linear-gradient(0deg,rgba(7,8,23,.97) 0%,rgba(7,8,23,.2) 65%)}
+  .hero-content{padding-top:120px;padding-bottom:150px}
+  .hero-copy{font-size:15px;max-width:400px}
+  .hero-proof{grid-template-columns:repeat(2,1fr)}
+  .hero-proof div{min-height:56px;padding:8px 11px}.hero-proof strong{font-size:18px}.hero-proof span{font-size:8px}
+  .proposition,.philosophy,.method,.media,.one{padding:72px 0}
+  .who{padding:0 0 72px}
+  .split-grid,.method-layout,.media-layout,.contact-grid{grid-template-columns:1fr;gap:45px}
+  .credentials{padding:69px 0}
+  .credentials-heading{display:block;margin-bottom:30px}
+  .credentials-heading h2{margin:10px 0 14px;font-size:47px}
+  .credential-grid{grid-template-columns:repeat(2,1fr)}
+  .credential-grid article{min-height:145px;border-bottom:1px solid rgba(255,255,255,.2)}
+  .credential-grid article:first-child{border-left:0}
+  .credential-grid article:nth-child(odd){border-left:1px solid rgba(255,255,255,.2)}
+  .credential-grid article:last-child{grid-column:span 2}
+  .compliance-table-wrap,.coaching-record{margin-top:53px}
+  .table-heading,.record-heading{display:block}
+  .table-heading h3,.record-heading h3{margin:7px 0 11px;font-size:36px}
+  .record-grid,.experience-list,.experience-list.three,.formats{grid-template-columns:1fr}
+  .formats article+article{padding-left:0;border-left:0}
+  .record-feature{min-height:0}
+  .experience-list>div{min-height:0;border-left:1px solid rgba(255,255,255,.2)}
+  .quote{margin-bottom:42px}
+  .principle-grid{grid-template-columns:1fr;gap:25px}
+  .method-copy{position:static}
+  .timeline-head{display:none}
+  .timeline>.row{grid-template-columns:1fr auto;gap:2px;padding:14px 0}
+  .timeline>.row>div:last-child{grid-column:1/-1}
+  .media-image{min-height:400px}
+  .media-inset{right:10px;bottom:-24px}
+  .contact{padding-top:72px}.contact-grid{padding-bottom:67px}
+  .enquiry-form,.lab-form{box-shadow:9px 9px 0 var(--navy)}
+  .lab-form{box-shadow:9px 9px 0 var(--red)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-grid>div:first-child{grid-column:span 2}
+  .legal{flex-direction:column}
+  .reveal{opacity:1;transform:none}
+}
+@media(max-width:480px){.focus-grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-art img{animation:none!important}.reveal{transition:none;opacity:1;transform:none}.ticker .track{animation:none}.slide h1 .ln>span{transition:none;transform:none}.dot.on i::after{animation:none;width:100%}}
+
+/* ===== multi-page ===== */
+.page[hidden]{display:none!important}
+.nav-panel a.active:not(.nav-cta){color:var(--blue-soft);box-shadow:0 2px 0 var(--red)}
+.page-head{position:relative;background:var(--navy-deep);color:#fff;padding:150px 0 56px;overflow:hidden}
+.page-head.has-img::before{content:"";position:absolute;inset:0 0 0 45%;background:var(--ph-img) center 35%/cover no-repeat}
+.page-head.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy-deep) 40%,rgba(7,8,23,.55) 70%,rgba(7,8,23,.2))}
+.page-head .wrap{position:relative;z-index:1}
+.ph-title{font:800 clamp(52px,8vw,112px)/.92 var(--display);text-transform:uppercase;letter-spacing:-.03em;margin:0 0 18px;max-width:900px}
+.ph-title em{color:var(--red);font-style:normal}
+.ph-intro{max-width:560px;color:#c3cae1;font-size:17px;margin:0}
+.on-page{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:28px}
+.on-page span{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#aeb7d0;margin-right:6px}
+.on-page a{padding:7px 11px;border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.on-page a:hover{background:#fff;color:var(--navy)}
+.next-page{display:grid;grid-template-columns:auto 1fr;gap:4px 24px;align-items:center;margin:56px 0;padding:26px 0;border-top:3px solid var(--navy);border-bottom:1px solid var(--line);text-decoration:none;color:var(--navy)}
+.next-page .np-k{grid-row:1/span 2;font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.next-page .np-t{font:800 clamp(34px,5vw,60px)/1 var(--display);text-transform:uppercase}
+.next-page .np-t b{color:var(--red);display:inline-block;transition:transform .2s}
+.next-page:hover .np-t b{transform:translateX(8px)}
+.next-page .np-s{font-size:13px;color:#4a4d63}
+#p-contact .contact{padding-top:150px}
+/* home hub */
+.hub{padding:100px 0}
+.hub-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:36px}
+.hub-head h2{font-size:clamp(43px,5.2vw,70px);font-weight:700;letter-spacing:-.02em;margin:0}
+.hub-head .lead{margin:0}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.hub-card{position:relative;min-height:250px;padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--navy);text-decoration:none;display:flex;flex-direction:column;overflow:hidden;background:var(--chalk);transition:background .25s}
+.hub-card h3{font-size:40px;margin:14px 0 8px}
+.hub-card p{font-size:14px;margin:0;max-width:34ch}
+.hub-card b{margin-top:auto;padding-top:18px;font-size:22px;color:var(--red);transition:transform .2s}
+.hub-card .hc-k{font:700 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.hub-card:hover{background:#fff}.hub-card:hover b{transform:translateX(8px)}
+.hub-card.img{color:#fff;background:var(--navy)}
+.hub-card.img::before{content:"";position:absolute;inset:0;background:var(--hc) center 25%/cover;opacity:.45;transition:opacity .3s,transform .6s}
+.hub-card.img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,8,23,.95),rgba(7,8,23,.35))}
+.hub-card.img>*{position:relative;z-index:1}
+.hub-card.img .hc-k{color:var(--blue-soft)}
+.hub-card.img:hover{background:var(--navy)}
+.hub-card.img:hover::before{opacity:.6;transform:scale(1.04)}
+.cta-band{background:var(--red);color:#fff;padding:70px 0}
+.cta-band h2{font-size:clamp(40px,5.4vw,72px);letter-spacing:-.02em;max-width:900px;margin-bottom:26px}
+.cta-band h2 em{color:var(--navy)}
+/* journal */
+.disclaim{margin-top:22px;padding:12px 14px;border-left:3px solid var(--red);background:#fff;font-size:13px;line-height:1.5}
+.service-card.plain{grid-template-columns:48px 1fr}
+.record-grid.three{grid-template-columns:repeat(3,1fr)}
+.across{margin-top:56px;padding-top:30px;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:start}
+.across h3{font-size:40px;margin:0}
+.strands{display:flex;flex-wrap:wrap;gap:8px}
+.strands span{padding:8px 11px;border:1px solid rgba(255,255,255,.28);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.strands span.on{border-color:var(--red);background:var(--red)}
+.log-sec{padding:105px 0}
+.log-head{display:grid;grid-template-columns:1fr .8fr;gap:40px;align-items:end;margin-bottom:34px}
+.log-head h2{font-size:clamp(43px,5.2vw,70px);font-weight:700;letter-spacing:-.02em;margin:0}
+.log-head p{margin:0;font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--navy);margin-bottom:30px}
+.stats div{padding:16px 16px 16px 0}
+.stats b{display:block;font:800 clamp(40px,5vw,64px)/1 var(--display);font-variant-numeric:tabular-nums}
+.stats span{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#4a4d63}
+.filters{display:flex;border:1px solid var(--line);overflow-x:auto;scrollbar-width:none;margin-bottom:26px}
+.filters button{flex:1 0 auto;background:none;border:0;border-right:1px solid var(--line);padding:14px 16px;font:700 11px var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--navy);cursor:pointer}
+.filters button:last-child{border-right:0}
+.filters button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.week{border-top:1px solid var(--line)}
+.week>summary{list-style:none;cursor:pointer;font:600 26px/1.1 var(--display);padding:16px 36px 16px 0;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;position:relative}
+.week>summary::-webkit-details-marker{display:none}
+.week>summary::after{content:"+";position:absolute;right:4px;top:12px;font:700 26px var(--body);color:var(--red)}
+.week[open]>summary::after{content:"\2212"}
+.week>summary:hover{color:var(--blue)}
+.week .wk-n{font:700 11px var(--body);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:#4a4d63;margin-left:auto}
+.week>summary small{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.entries{border-top:1px solid var(--line)}
+.entry{display:grid;grid-template-columns:96px 1fr 150px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.entry time,.upcoming time{font:700 20px/1 var(--display);text-transform:uppercase}
+.entry time small,.upcoming time small{display:block;font:700 10px var(--body);letter-spacing:.08em;color:var(--red);margin-bottom:3px}
+.entry b,.upcoming b{font:600 22px/1.05 var(--display);display:block}
+.entry p{margin:3px 0 0;font-size:13px;color:#4a4d63}
+.jtag{justify-self:end;padding:3px 7px;border:1px solid var(--line);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.jtag.coached{border-color:var(--blue);color:var(--blue)}
+.jtag.pitch{border-color:var(--red);color:var(--red)}
+.jtag.workshop{border-color:var(--navy);color:var(--navy)}
+.jtag.schools{background:var(--navy);color:#fff;border-color:var(--navy)}
+.jtag.assignment{border-style:dashed;color:var(--navy)}
+.principles{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.principles article{padding-top:17px;border-top:3px solid var(--red)}
+.principles span{color:var(--red-light);font:700 19px var(--display)}
+.principles h3{margin:14px 0 8px;font-size:28px}
+.principles p{margin:0;font-size:14px;color:#c3cae1}
+.next{padding:105px 0}
+.next-grid{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:start}
+.next-grid h2{font-size:clamp(43px,5.2vw,70px);font-weight:700;letter-spacing:-.02em;margin-bottom:22px}
+.upcoming{border-top:1px solid var(--line)}
+.upcoming>div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+.upcoming p{margin:3px 0 0;font-size:13px;color:#4a4d63}
+.upcoming .soon{grid-column:1/-1;font-size:14px}
+.reflect{padding:28px;background:#fff;box-shadow:14px 14px 0 var(--navy)}
+.reflect h3{font-size:32px;margin-bottom:5px}.reflect>p{font-size:12px;line-height:1.5;margin:0}
+.reflect label{display:block;margin-top:13px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.reflect select,.reflect textarea{display:block;width:100%;margin-top:4px;padding:9px 0;border:0;border-bottom:1px solid var(--line);outline:0;background:transparent;color:var(--navy);font:14px var(--body);border-radius:0}
+.reflect textarea#rf-out{min-height:230px;border:1px solid var(--line);padding:10px;font-size:13px;line-height:1.55}
+.reflect .button{width:100%;margin-top:18px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rf-status{min-height:18px;margin:9px 0 0;font-size:12px}
+@media(max-width:980px){.next-grid{grid-template-columns:1fr;gap:45px}.record-grid.three,.principles{grid-template-columns:1fr}.hub-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){
+  .page-head{padding:118px 0 40px}
+  .page-head.has-img::before{inset:0}
+  .page-head.has-img::after{background:linear-gradient(0deg,var(--navy-deep) 20%,rgba(7,8,23,.6))}
+  #p-contact .contact{padding-top:110px}
+  .hub{padding:64px 0}.hub-head,.log-head,.across{grid-template-columns:1fr;gap:20px}
+  .hub-grid{grid-template-columns:1fr}.hub-card{min-height:200px}
+  .log-sec,.next{padding:72px 0}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .entry{grid-template-columns:78px 1fr;gap:4px 12px}
+  .entry .jtag{grid-column:2;justify-self:start;margin-top:6px}
+  .timeline>.row>p{grid-column:1/-1}
+  .reflect{box-shadow:9px 9px 0 var(--navy)}
+  .next-page{grid-template-columns:1fr}.next-page .np-k{grid-row:auto}
+}
+
+
+/* hosted version: hide AI-only controls when the Claude runtime is absent */
+.no-ai .fab,.no-ai .dock,.no-ai #enq-ai,.no-ai #rf-go,.no-ai #rf-focus,.no-ai label[for="rf-focus"],.no-ai .aud-side h4,.no-ai .aud-side .chips,.no-ai .lab-form{display:none!important}
+.no-ai .lab{grid-template-columns:1fr}
+.no-ai .btn-pair.enq-top{grid-template-columns:1fr}
+.send-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.send-row .button{margin-top:10px!important;padding-inline:10px}
+@media(max-width:480px){.send-row{grid-template-columns:1fr}}
+.hp{position:absolute;left:-9999px}
+#enq-send{display:none!important}
+.send-row{grid-template-columns:1fr 1fr}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#home" aria-label="Coach Thapelo home"><img src="img/logo.webp" alt="Coach Thapelo badge logo"><span>Coach Thapelo</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>
+  <nav class="nav-panel" id="primary-nav" aria-label="Primary navigation">
+    <a href="#home" data-nav="home">Home</a><a href="#about" data-nav="about">About</a><a href="#community" data-nav="community">Community</a><a href="#journal" data-nav="journal">Journal</a><a href="#experience" data-nav="experience">Credentials</a><a href="#method" data-nav="method">Method</a><a href="#one" data-nav="one">1-to-1</a><a href="#contact" class="nav-cta" data-nav="contact">Get in touch <span>↗</span></a>
+  </nav>
+</header>
+
+
+<main>
+<div class="page" id="p-home" data-page="home">
+<!-- HERO SLIDER -->
+<section class="hero section" id="home" aria-roledescription="carousel" aria-label="Coach Thapelo highlights">
+  <div class="hero-art" aria-hidden="true">
+    <figure class="on"><img src="img/heading.jpg" alt="" style="object-position:50% 20%"></figure>
+    <figure><img src="img/touchline.jpg" alt="" style="object-position:32% 50%"></figure>
+    <figure><img src="img/classroom.jpg" alt="" style="object-position:40% 30%"></figure>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <div class="slides">
+      <article class="slide on" aria-roledescription="slide" aria-label="1 of 3">
+        <p class="eyebrow">Community football coach <i></i> Luton and North London</p>
+        <h1><span class="ln"><span>Every player.</span></span><span class="ln"><span><em>Every place.</em></span></span><span class="ln"><span>Progress.</span></span></h1>
+        <p class="hero-copy">I use football to build confidence, belonging and skill in schools and communities. Every session planned, delivered with purpose and reviewed honestly.</p>
+        <div class="button-row"><a class="button button-primary" href="#community">My current programme <span>→</span></a><a class="button button-ghost" href="#contact">Book for a school or group</a></div>
+      </article>
+      <article class="slide" aria-roledescription="slide" aria-label="2 of 3">
+        <p class="eyebrow">UEFA C licensed <i></i> Arsenal Community Coach Development Programme 2026/27</p>
+        <h2 class="h1" style="font-size:clamp(64px,10vw,142px);font-weight:800;letter-spacing:-.035em;text-transform:uppercase;margin-bottom:21px;max-width:680px"><span class="ln"><span>Football</span></span><span class="ln"><span><em>Coach.</em></span></span><span class="ln"><span>Development.</span></span></h2>
+        <p class="hero-copy">UEFA C licensed football coach in Luton. I design purposeful, player-centred sessions, help players understand the game and support community programmes and management teams with clear planning and review.</p>
+        <div class="button-row"><a class="button button-primary" href="#contact">Work with me <span>→</span></a><a class="button button-ghost" href="#method">See how I coach</a></div>
+      </article>
+      <article class="slide" aria-roledescription="slide" aria-label="3 of 3">
+        <p class="eyebrow">Schools and community <i></i> South African roots</p>
+        <h2 style="font-size:clamp(64px,10vw,142px);font-weight:800;letter-spacing:-.035em;text-transform:uppercase;margin-bottom:21px;max-width:680px"><span class="ln"><span>Press box</span></span><span class="ln"><span><em>to the</em></span></span><span class="ln"><span>Classroom.</span></span></h2>
+        <p class="hero-copy">Nine years reporting on South African professional football, then four years with Luton Town FC Foundation in schools, holiday provision and community football.</p>
+        <div class="button-row"><a class="button button-primary" href="#experience">My coaching record <span>→</span></a><a class="button button-ghost" href="#contact">Book for a school</a></div>
+      </article>
+    </div>
+    <div class="slider-ui">
+      <div class="dots" role="tablist" aria-label="Choose slide">
+        <button class="dot on" role="tab" aria-selected="true" aria-label="Slide 1"><i></i></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2"><i></i></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3"><i></i></button>
+      </div>
+      <span class="count"><b id="cur">01</b> / 03</span>
+      <button class="arw" id="prev" aria-label="Previous slide">←</button><button class="arw" id="next" aria-label="Next slide">→</button>
+    </div>
+  </div>
+  <div class="hero-proof wrap" aria-label="Key credentials">
+    <div><strong>UEFA C</strong><span>Diploma · January 2023</span></div>
+    <div><strong>DBS</strong><span>Enhanced · Sep 2026</span></div>
+    <div><strong>FA</strong><span>Coach registration current</span></div>
+    <div><strong>04 yrs</strong><span>Luton Town FC Foundation</span></div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+
+<section class="hub section light-section" aria-labelledby="hub-title">
+  <div class="wrap">
+    <div class="hub-head"><div><p class="eyebrow blue">Explore</p><h2 id="hub-title">Find what you need.</h2></div><p class="lead">A community football coach who uses the game to develop young people and communities. Pick a page.</p></div>
+    <div class="hub-grid">
+      <a class="hub-card img" href="#community" style="--hc:url(img/cdp-kit.jpg)"><span class="hc-k">01 · Right now</span><h3>Community</h3><p>The Arsenal Community Coach Development Programme 2026/27, and my school placement.</p><b>→</b></a>
+      <a class="hub-card img" href="#journal" style="--hc:url(img/cdp-hub.jpg)"><span class="hc-k">02 · Session by session</span><h3>Journal</h3><p>My programme log, what I'm learning and what's coming up.</p><b>→</b></a>
+      <a class="hub-card" href="#about"><span class="hc-k">03 · Who I am</span><h3>About</h3><p>Approach, philosophy, who I work with, and my story from the press box to the pitch.</p><b>→</b></a>
+      <a class="hub-card" href="#experience"><span class="hc-k">04 · On the record</span><h3>Credentials</h3><p>UEFA C, Enhanced DBS, safeguarding and the full qualification register.</p><b>→</b></a>
+      <a class="hub-card" href="#method"><span class="hc-k">05 · How I coach</span><h3>Method and session lab</h3><p>Plan it. Play it. Progress. Build a free session plan with AI.</p><b>→</b></a>
+      <a class="hub-card img" href="#one" style="--hc:url(img/heading.jpg)"><span class="hc-k">06 · Also available</span><h3>1-to-1</h3><p>Extra focus for individual players and small groups.</p><b>→</b></a>
+    </div>
+  </div>
+</section>
+<section class="cta-band section"><div class="wrap"><h2>Strengthen your team. <em>Support your community.</em></h2><div class="button-row"><a class="button button-dark" href="#contact">Get in touch <span>→</span></a><a class="button button-ghost" href="https://wa.me/447365447103" target="_blank" rel="noopener">WhatsApp</a></div></div></section>
+
+</div>
+<div class="page" id="p-about" data-page="about" hidden>
+<section class="page-head"><div class="wrap"><p class="eyebrow">About</p><h1 class="ph-title">Coach the player. <em>Back the person.</em></h1><p class="ph-intro">Approach, philosophy, who I work with and where I come from.</p><div class="on-page"><span>On this page</span><a href="#about">Approach</a><a href="#philosophy">Philosophy</a><a href="#who">Who it's for</a><a href="#media">Story</a></div></div></section>
+<!-- ABOUT -->
+<section class="proposition section light-section" id="about" aria-labelledby="about-title">
+  <div class="wrap split-grid reveal">
+    <div class="section-intro">
+      <p class="eyebrow blue">The coaching approach</p>
+      <h2 id="about-title">Community football coaching, delivered with professional standards.</h2>
+      <p class="lead">I am a football coach first. I use the game to develop young people and communities: confidence, belonging and skill, planned around the people in front of me.</p>
+      <p>Four years with Luton Town FC Foundation across schools, holiday provision, girls' and women's sessions and Premier League Primary Stars taught me to make the game accessible, challenging and enjoyable. Nine years in football media adds planning, video review and communication, but the work always starts on the pitch, in the playground or the community centre.</p>
+      <a class="text-link" href="#community">My current programme <span>→</span></a>
+    </div>
+    <div class="service-stack">
+      <a class="service-card" href="#community"><span class="service-number">01</span><div><h3>Schools and community</h3><p>I go where people are: primary schools, estates, parks and community centres, working alongside teachers and local partners.</p></div><span class="arrow">↗</span></a>
+      <a class="service-card" href="#philosophy"><span class="service-number">02</span><div><h3>Inclusive sessions</h3><p>Girls-only, mixed ability, beginners and accessible sessions. I adapt the activity, never exclude the person.</p></div><span class="arrow">↗</span></a>
+      <a class="service-card" href="#method"><span class="service-number">03</span><div><h3>Player development</h3><p>Football as a tool for confidence, teamwork and decision-making, with pathways from a lunchtime club to a team.</p></div><span class="arrow">↗</span></a>
+      <a class="service-card" href="#media"><span class="service-number">04</span><div><h3>Team support</h3><p>Planning, match review and clear communication that helps the wider club or programme.</p></div><span class="arrow">↗</span></a>
+      <a class="service-card" href="#one"><span class="service-number">05</span><div><h3>1-to-1 and small groups</h3><p>Extra focus for individual players, with a written development plan.</p></div><span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY + AUDIENCE -->
+<section class="philosophy section light-section" id="philosophy" aria-labelledby="philosophy-title">
+  <div class="wrap reveal">
+    <p class="eyebrow blue">Coaching philosophy</p>
+    <h2 id="philosophy-title" class="quote">Players learn football by <em>playing football.</em> The coach designs the game so the lesson is unavoidable, then gets out of the way.</h2>
+    <div class="principle-grid">
+      <article><span>01</span><h3>Football as a vehicle</h3><p>I use the game to build confidence, teamwork, communication, decision-making and wellbeing. Technique matters. So does the young person.</p></article>
+      <article><span>02</span><h3>Everyone gets a game</h3><p>Girls and women, disabled players, beginners, people new to the country. I adapt the activity, never exclude the person.</p></article>
+      <article><span>03</span><h3>Community-led</h3><p>I go where people are: schools, estates, parks and community centres. I work with local partners and respect each setting's routines.</p></article>
+      <article><span>04</span><h3>Plan, deliver, review</h3><p>Every session planned, delivered with purpose and reviewed honestly. Attendance, feedback and pupil questionnaires show the impact.</p></article>
+      <article><span>05</span><h3>Pathways</h3><p>From a lunchtime club to a team. From a drop-in to a qualification. From player to volunteer to coach.</p></article>
+      <article><span>06</span><h3>Girls' participation matters</h3><p>Girls-only sessions build belonging and confidence first, skill second. Then they stay.</p></article>
+    </div>
+  </div>
+</section>
+<section class="who section light-section" id="who" aria-labelledby="who-title">
+  <div class="wrap reveal">
+    <p class="eyebrow blue">Who it's for</p>
+    <div class="tabs" role="tablist" aria-label="Choose who you are">
+      <button class="tab" role="tab" data-aud="school" aria-selected="false">Schools and camps</button>
+      <button class="tab" role="tab" data-aud="community" aria-selected="false">Community groups</button>
+      <button class="tab" role="tab" data-aud="club" aria-selected="false">Clubs</button>
+      <button class="tab" role="tab" data-aud="parent" aria-selected="false">Parents and carers</button>
+      <button class="tab" role="tab" data-aud="player" aria-selected="false">Players</button>
+      <button class="tab" role="tab" data-aud="media" aria-selected="false">Media</button>
+    </div>
+    <div class="aud" role="tabpanel" aria-live="polite">
+      <div><h3 id="who-title"></h3><ul class="proof" id="aud-proof"></ul></div>
+      <aside class="aud-side"><h4>Ask the assistant</h4><div class="chips" id="aud-chips"></div><button class="text-link" type="button" id="aud-enquire">Start an enquiry <span>→</span></button></aside>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA / STORY -->
+<section class="media section light-section" id="media" aria-labelledby="media-title">
+  <div class="wrap media-layout reveal">
+    <div class="media-image">
+      <img src="img/classroom.jpg" alt="Coach Thapelo teaching a primary school class about South Africa" loading="lazy">
+      <div class="media-inset"><img src="img/touchline.jpg" alt="Coach Thapelo arriving at a floodlit training pitch" loading="lazy" style="object-position:30% 50%"></div>
+      <div class="image-label">Schools, community and the touchline <span>●</span></div>
+    </div>
+    <div class="media-copy">
+      <p class="eyebrow blue">From the press box to the pitch</p>
+      <h2 id="media-title">Useful detail, beyond the training pitch.</h2>
+      <p class="lead">Born in Johannesburg, of BaTaung heritage, I spent nine years reporting on South African professional football in the PSL and founded FullCircle Sport Online. Where it helps the players and the club, I use that experience to support the coaching.</p>
+      <p>Storytelling serves the community too: I help projects capture and share what they achieve.</p>
+      <div class="capability-list">
+        <div><span>↗</span><p><strong>Match review</strong>Film and revisit key moments to support specific coaching conversations.</p></div>
+        <div><span>↗</span><p><strong>Player feedback</strong>Turn observations into simple, practical points that players can use.</p></div>
+        <div><span>↗</span><p><strong>Club communication</strong>Clear session or match information for staff, players and parents.</p></div>
+        <div><span>↗</span><p><strong>School visits</strong>Football and South African heritage sessions that link sport to the classroom.</p></div>
+      </div>
+      <a class="button button-dark" href="#contact">Discuss your club's needs <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><a class="next-page" href="#community"><span class="np-k">Next</span><span class="np-t">Community <b>→</b></span><span class="np-s">The 2026/27 programme</span></a></div>
+</div>
+<div class="page" id="p-community" data-page="community" hidden>
+<section class="page-head"><div class="wrap"><p class="eyebrow">Community</p><h1 class="ph-title">The 2026/27 <em>programme.</em></h1><p class="ph-intro">Volunteer coach on the Arsenal Community Coach Development Programme: coach education, placements and what I am learning.</p></div></section>
+<!-- COMMUNITY: 2026/27 PROGRAMME -->
+<section class="credentials section" id="community" aria-labelledby="community-title">
+  <div class="wrap reveal">
+    <div class="credentials-heading">
+      <p class="eyebrow">Right now <i></i> Arsenal Community Coach Development Programme 2026/27</p>
+      <h2 id="community-title">Developing as a community coach, in the community.</h2>
+      <p>I'm a volunteer coach on the Arsenal Community Coach Development Programme 2026/27. The school placements, coach education and workshops below all happen through the programme.</p>
+    </div>
+
+    <div class="prog-grid">
+      <div class="prog-photos">
+        <figure class="prog-main"><img src="img/cdp-kit.jpg" alt="Coach Thapelo in the orange and black programme training kit" loading="lazy"><figcaption class="image-label">Programme kit <span>●</span></figcaption></figure>
+        <figure class="prog-inset"><img src="img/cdp-hub.jpg" alt="Coach Thapelo in the programme jacket at The Arsenal Hub, N7" loading="lazy"><figcaption class="image-label">The Arsenal Hub, N7 <span>●</span></figcaption></figure>
+      </div>
+      <div class="prog-account">
+        <p class="eyebrow">The programme in full</p>
+        <div class="prog-list">
+          <div><span>01</span><p><strong>How I got here</strong>Selected through an assessment day on 23 June 2026, then onboarded in September, including an Enhanced DBS check.</p></div>
+          <div><span>02</span><p><strong>Where and how long</strong>Based at The Arsenal Hub, N7. Year-long, September 2026 to summer 2027. I take part as a volunteer coach.</p></div>
+          <div><span>03</span><p><strong>Coach education</strong>Every Tuesday, Thursday and Friday morning at the Hub, starting with an induction week on 1 September.</p></div>
+          <div><span>04</span><p><strong>Community placements</strong>Practical placements in the community, supporting the lead staff. The strand rotates each half-term.</p></div>
+          <div><span>05</span><p><strong>Assignments and reflection</strong>A Session Reflection Form after sessions, plus set assignments, like designing a small-sided game in pairs and delivering it to the group at Market Road, N7.</p></div>
+          <div><span>06</span><p><strong>Workshops</strong>Stepping Over the Sidelines, identifying support needs and behaviours, and inclusive formats including visually impaired and blind football.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="record-grid">
+      <article class="record-feature"><span class="record-number">01</span><h3>This half-term, through the programme</h3><p>My half-term 1 placement is the Primary Schools strand (Premier League Primary Stars). I support the lead staff in primary schools across Islington and Camden: girls' lunchtime clubs, football-focused learning and PE, and in-class support alongside the class teacher.</p><p style="margin-top:10px">Every Tuesday since 22 September, I support the women and girls lead coach at a primary school: a girls' lunchtime football club, then two Year 6 PE lessons. Week one was observing and getting to know the pupils. The next step is planning and leading part of the lunchtime club, starting with the arrival activity.</p><p class="record-note">Half-term 1 · Primary Schools strand</p></article>
+      <article class="record-feature"><span class="record-number">02</span><h3>Across the year</h3><p>The programme rotates my placement each half-term, across strands such as schools, social inclusion, health and accessibility, women and girls, and grassroots football. Coach education carries on every Tuesday, Thursday and Friday morning.</p><p class="record-note">September 2026 to summer 2027</p></article>
+    </div>
+
+    <div class="coaching-record">
+      <div class="record-heading"><div><p class="eyebrow">Coach education so far</p><h3>September on the programme.</h3></div><p>Topics covered at the Hub, on the pitch and in schools in the first month. The full session log is in my programme journal.</p></div>
+      <div class="experience-list three">
+        <div><span>01</span><p>Induction week and the Session Reflection Form</p></div>
+        <div><span>02</span><p>Small-sided games designed with outcomes in mind, delivered to the group and saved in the programme's Coaching Manual</p></div>
+        <div><span>03</span><p>Session structure and an introduction to delivering a coaching session</p></div>
+        <div><span>04</span><p>Premier League Primary Stars briefing: teacher support, football-focused learning and pupil questionnaires</p></div>
+        <div><span>05</span><p>Identifying support needs and behaviours, and planning for differentiation, with Angel Shed</p></div>
+        <div><span>06</span><p>A primary school event: pitch activities, a stadium tour and workshops, with great feedback from pupils and staff</p></div>
+      </div>
+      <p class="credential-note">Next on the programme: carousel and whole-part-whole session structures, planning my own session, a pre-academy visit and a Black History Month primary school event.</p>
+    </div>
+    <div class="coaching-record">
+      <div class="record-heading"><div><p class="eyebrow">What I'm learning</p><h3>Six things this programme is teaching me.</h3></div><p>Written up as I go, session by session.</p></div>
+      <div class="experience-list three">
+        <div><span>01</span><p>Supporting the class teacher without taking over</p></div>
+        <div><span>02</span><p>Building girls' confidence through girls-only sessions</p></div>
+        <div><span>03</span><p>Using football to support learning and behaviour</p></div>
+        <div><span>04</span><p>Safeguarding in school settings</p></div>
+        <div><span>05</span><p>Programme evaluation with pupil questionnaires</p></div>
+        <div><span>06</span><p>Adapting one plan for mixed ages and abilities</p></div>
+      </div>
+    </div>
+    <div class="coaching-record">
+      <div class="record-heading"><div><p class="eyebrow">How I show up</p><h3>Professional, every session.</h3></div><p>The standards I hold myself to on placement and beyond.</p></div>
+      <div class="experience-list three">
+        <div><span>01</span><p>Support, don't take over. I observe first, then add value to the teacher or lead coach.</p></div>
+        <div><span>02</span><p>Safe and professional. Safeguarding first, clear boundaries, no unauthorised photos, concerns go to the lead.</p></div>
+        <div><span>03</span><p>A role model. Punctual, reliable and approachable, and I communicate early if I can't attend.</p></div>
+      </div>
+    </div>
+    <div class="coaching-record">
+      <h3 style="font-size:clamp(34px,4.4vw,56px);max-width:900px;margin:0 0 26px">"The badge on the kit matters less than the child who comes back <em>next week.</em>"</h3>
+      <p class="credential-note" style="margin:0 0 22px">I take part as a volunteer on the programme. Arsenal does not employ me, and this site is my own.</p>
+      <div class="button-row"><a class="button button-primary" href="#contact">Talk to me about community work <span>→</span></a><a class="button button-ghost" id="cdp-link" href="#journal">Read my programme journal <span>→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker navy" aria-hidden="true"><div class="track" id="giant"></div></div>
+
+<div class="wrap"><a class="next-page" href="#journal"><span class="np-k">Next</span><span class="np-t">Journal <b>→</b></span><span class="np-s">Session by session</span></a></div>
+</div>
+<div class="page" id="p-journal" data-page="journal" hidden>
+<section class="page-head has-img" style="--ph-img:url(img/cdp-hub.jpg)"><div class="wrap"><p class="eyebrow">Programme journal</p><h1 class="ph-title">Learning <em>in the</em> community.</h1><p class="ph-intro">My running record of the programme: sessions, placements, what we covered and what is coming up. A personal journal, not an Arsenal publication.</p><div class="on-page"><span>On this page</span><a href="#j-programme">Programme</a><a href="#j-halfterm">This half-term</a><a href="#j-log">Session log</a><a href="#j-learning">Learning</a><a href="#j-next">Coming up</a></div></div></section>
+<section class="proposition section light-section" id="j-programme" aria-labelledby="prog-title">
+  <div class="wrap split-grid">
+    <div class="section-intro">
+      <p class="eyebrow blue">The programme</p>
+      <h2 id="prog-title">A year of coach education and real delivery.</h2>
+      <p class="lead">I was selected through an assessment day in June 2026. I'm a volunteer coach on the programme, based at The Arsenal Hub, N7, from September 2026 to summer 2027.</p>
+      <p>Coach education happens at the Hub every Tuesday, Thursday and Friday morning. The rest of the week is practical placements in the community, rotating each half-term.</p>
+      <p class="disclaim">This is my personal learning journal. It is not an Arsenal publication, and nothing on this page means the club endorses, employs or recommends me.</p>
+    </div>
+    <div class="service-stack">
+      <div class="service-card plain"><span class="service-number">01</span><div><h3>Coach education</h3><p>Tuesday, Thursday and Friday mornings: session structure, small-sided games, delivering a coaching session.</p></div></div>
+      <div class="service-card plain"><span class="service-number">02</span><div><h3>Community placements</h3><p>Supporting lead staff in real settings, starting with primary schools.</p></div></div>
+      <div class="service-card plain"><span class="service-number">03</span><div><h3>Workshops</h3><p>Inclusion, identifying support needs and behaviours, and stepping over the sidelines.</p></div></div>
+      <div class="service-card plain"><span class="service-number">04</span><div><h3>Assignments and reflection</h3><p>Designed and delivered work, with a Session Reflection Form after every session.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="credentials section" id="j-halfterm" aria-labelledby="ht-title">
+  <div class="wrap">
+    <div class="credentials-heading">
+      <p class="eyebrow">Half-term 1</p>
+      <h2 id="ht-title">Primary Schools strand.</h2>
+      <p>Premier League Primary Stars, in primary schools across Islington and Camden. I support the lead staff. I don't lead the sessions.</p>
+    </div>
+    <div class="record-grid three">
+      <article class="record-feature"><span class="record-number">01</span><h3>Girls' lunchtime clubs</h3><p>Helping girls-only clubs where belonging and confidence come first, and skill follows.</p></article>
+      <article class="record-feature"><span class="record-number">02</span><h3>Football-focused learning and PE</h3><p>Supporting lessons where football is the way into learning, behaviour and teamwork.</p></article>
+      <article class="record-feature"><span class="record-number">03</span><h3>In-class teacher support</h3><p>Working alongside the class teacher. Observe first, then add value, never take over.</p></article>
+    </div>
+    <p class="credential-note">No school, pupil or staff member is named on this page, and no photos of children are used.</p>
+    <div class="across">
+      <div><p class="eyebrow">Across the year</p><h3>Placements rotate each half-term.</h3></div>
+      <div class="strands"><span class="on">Primary schools</span><span>Social inclusion</span><span>Health and accessibility</span><span>Women and girls</span><span>Grassroots football</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="log-sec section light-section" id="j-log" aria-labelledby="log-title">
+  <div class="wrap">
+    <div class="log-head">
+      <div><p class="eyebrow blue">Session log</p><h2 id="log-title">September, <em>session by session.</em></h2></div>
+      <p>Compiled from the programme's weekly recaps and session notices. Times and venues are shown where they were confirmed.</p>
+    </div>
+    <div class="stats" id="j-stats"></div>
+    <div class="filters" role="group" aria-label="Filter sessions" id="j-filters">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="coached" aria-pressed="false">Coach education</button>
+      <button type="button" data-f="pitch" aria-pressed="false">On the pitch</button>
+      <button type="button" data-f="workshop" aria-pressed="false">Workshops</button>
+      <button type="button" data-f="schools" aria-pressed="false">Schools</button>
+      <button type="button" data-f="assignment" aria-pressed="false">Assignments</button>
+    </div>
+    <div id="j-weeks"></div>
+  </div>
+</section>
+
+<section class="method section" id="j-learning" aria-labelledby="learn-title">
+  <div class="wrap">
+    <div class="method-layout">
+      <div class="method-copy">
+        <p class="eyebrow">What we covered</p>
+        <h2 id="learn-title">Plan it. Play it. <em>Progress.</em></h2>
+        <p class="lead" style="color:#fff">September built the foundations: how a session is structured, how a game is designed around an outcome, and how to read the needs of the people in front of you.</p>
+        <p>Each topic feeds straight into how I plan and deliver in schools and community settings.</p>
+      </div>
+      <div class="timeline" aria-label="Topics covered in September">
+        <div class="timeline-head"><span>Topic</span><span>When</span><span>Why it matters to my coaching</span></div>
+        <div class="row"><b>Small-sided games</b><time>8 to 24 Sep</time><p>Designing games with the outcome in mind, then delivering my own to the group.</p></div>
+        <div class="row"><b>Session structure</b><time>From 14 Sep</time><p>A clear shape for every session, so the lesson is built in.</p></div>
+        <div class="row"><b>Delivering a session</b><time>18 Sep</time><p>Turning a plan into a session that runs well on the day.</p></div>
+        <div class="row"><b>Stepping over the sidelines</b><time>16 Sep</time><p>Full-day workshop that the delivery session built on.</p></div>
+        <div class="row"><b>Support needs and behaviours</b><time>22 Sep</time><p>Spotting what a young person needs so everyone gets a game.</p></div>
+        <div class="row"><b>Gamification</b><time>10 Sep</time><p>Footgolf morning: what other games teach us about engagement.</p></div>
+        <div class="row"><b>Inclusive formats</b><time>21 Sep</time><p>Visually impaired and blind football added to the timetable.</p></div>
+        <div class="row"><b>Teacher support and football-focused learning</b><time>21 Sep</time><p>Complement the teacher in class. Use the game for teamwork, communication and confidence on the pitch.</p></div>
+        <div class="row"><b>Planning for differentiation</b><time>22 to 25 Sep</time><p>One plan, adapted so every child can take part and be challenged.</p></div>
+        <div class="row"><b>Carousel and whole-part-whole</b><time>Week 5</time><p>Next up: two session structures, then planning my own session.</p></div>
+      </div>
+    </div>
+    <div class="principles">
+      <article><span>01</span><h3>Support, don't take over</h3><p>In a classroom or a lead coach's session, I observe first, then add value.</p></article>
+      <article><span>02</span><h3>Safe and professional</h3><p>Safeguarding first. Clear boundaries, no unauthorised photos, concerns go to the lead.</p></article>
+      <article><span>03</span><h3>Lifelong learner</h3><p>Coach education, honest reflection and the next qualification: FA Introduction to Coaching Football, then UEFA B.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="next section light-section" id="j-next" aria-labelledby="next-title">
+  <div class="wrap next-grid">
+    <div>
+      <p class="eyebrow blue">Coming up</p>
+      <h2 id="next-title">Next on the <em>timetable.</em></h2>
+      <div class="upcoming" id="j-upcoming"></div>
+    </div>
+    <form class="reflect" id="rf-form">
+      <h3>Reflection helper</h3>
+      <p>Pick a week to get a reflection template for that week's sessions. The AI version sets out a reflection framework from that week's sessions, with prompts for your own observations. It never writes what happened for you.</p>
+      <label for="rf-week">Week<select id="rf-week"></select></label>
+      <label for="rf-focus">Focus<select id="rf-focus"><option>What went well, even better if, next step</option><option>Coaching behaviours and communication</option><option>Inclusion and support needs</option><option>Link to my own community coaching</option></select></label>
+      <button class="button button-primary" type="submit" id="rf-go">Draft my reflection prompts <span>→</span></button>
+      <label for="rf-out">Draft<textarea id="rf-out" placeholder="Your reflection framework appears here. Fill in the brackets with what you saw and did."></textarea></label>
+      <div class="pair"><button class="button button-dark" type="button" id="rf-copy">Copy</button><button class="button button-dark" type="button" id="rf-plain">Blank template</button></div>
+      <p class="rf-status" id="rf-note"></p>
+    </form>
+  </div>
+</section>
+
+<div class="wrap"><a class="next-page" href="#experience"><span class="np-k">Next</span><span class="np-t">Credentials <b>→</b></span><span class="np-s">Qualified, checked, current</span></a></div>
+</div>
+<div class="page" id="p-experience" data-page="experience" hidden>
+<section class="page-head"><div class="wrap"><p class="eyebrow">Credentials</p><h1 class="ph-title">Qualified. Checked. <em>Current.</em></h1><p class="ph-intro">UEFA C licensed, FA registered, Enhanced DBS, and every certificate on the record.</p></div></section>
+<!-- CREDENTIALS -->
+<section class="credentials section" id="experience" aria-labelledby="credentials-title">
+  <div class="wrap reveal">
+    <div class="credentials-heading">
+      <p class="eyebrow">Credentials &amp; compliance</p>
+      <h2 id="credentials-title">Ready to support your club properly.</h2>
+      <p>Certificates from The FA, England Football Learning and 1st4sport. Certificate numbers supplied on request. References completed through Arsenal CDP onboarding.</p>
+    </div>
+    <div class="credential-grid">
+      <article><span class="credential-mark">UC</span><h3>UEFA C Licence</h3><p>Held · Jan 2023</p></article>
+      <article><span class="credential-mark">FA</span><h3>FA coach registration</h3><p>Current</p></article>
+      <article><span class="credential-mark">DBS</span><h3>Enhanced DBS</h3><p>Received September 2026</p></article>
+      <article><span class="credential-mark">SG</span><h3>Safeguarding Children</h3><p>Completed · Sep 2026</p></article>
+      <article><span class="credential-mark">EA</span><h3>Emergency aid</h3><p>Completed · Sep 2026</p></article>
+    </div>
+    <p class="credential-note">Compliance is current and maintained. Certificate numbers on request.</p>
+
+    <div class="compliance-table-wrap">
+      <div class="table-heading"><div><p class="eyebrow">Credential register</p><h3>Every badge, on the record.</h3></div><p>Use the column headings to sort the register.</p></div>
+      <div class="table-scroll">
+        <table class="credentials-table">
+          <thead><tr>
+            <th scope="col"><button type="button" data-sort="0">Credential <span aria-hidden="true">↕</span></button></th>
+            <th scope="col"><button type="button" data-sort="1">Issuer <span aria-hidden="true">↕</span></button></th>
+            <th scope="col"><button type="button" data-sort="2">Date <span aria-hidden="true">↕</span></button></th>
+            <th scope="col"><button type="button" data-sort="3">Status <span aria-hidden="true">↕</span></button></th>
+          </tr></thead>
+          <tbody>
+            <tr><td>UEFA C Diploma</td><td>The FA</td><td data-v="2023-01">Jan 2023</td><td><span class="status status-held">Held</span></td></tr>
+            <tr><td>Enhanced DBS</td><td>Via Arsenal CDP onboarding</td><td data-v="2026-09">Sep 2026</td><td><span class="status status-held">Received</span></td></tr>
+            <tr><td>FA coach registration</td><td>The FA</td><td data-v="2026-12">Ongoing</td><td><span class="status status-current">Current</span></td></tr>
+            <tr><td>FA Level 1 Award in Coaching Football</td><td>1st4sport · Bedfordshire FA</td><td data-v="2017-12">Dec 2017</td><td><span class="status status-held">Held</span></td></tr>
+            <tr><td>EE Playmaker</td><td>England Football</td><td data-v="2025-04">Apr 2025</td><td><span class="status status-done">Completed</span></td></tr>
+            <tr><td>The FA Playmaker</td><td>England Football</td><td data-v="2022-01">Jan 2022</td><td><span class="status status-done">Completed</span></td></tr>
+            <tr><td>Introduction to Talent Identification in Football</td><td>England Football Learning</td><td data-v="2021-12">Dec 2021</td><td><span class="status status-done">Completed</span></td></tr>
+            <tr><td>FA Introduction to First Aid in Football</td><td>England Football Learning</td><td data-v="2026-09">Sep 2026</td><td><span class="status status-current">Completed</span></td></tr>
+            <tr><td>Equality and Diversity</td><td>The FA</td><td data-v="2021-08">Aug 2021</td><td><span class="status status-done">Completed</span></td></tr>
+            <tr><td>FA Safeguarding Children</td><td>The FA</td><td data-v="2026-09">Sep 2026</td><td><span class="status status-current">Completed</span></td></tr>
+            <tr><td>FA Emergency First Aid</td><td>The FA</td><td data-v="2017-06">Jun 2017</td><td><span class="status status-done">Superseded</span></td></tr>
+            <tr><td>Football Digital Marketing and Social Media</td><td>Sports Business Institute Barcelona</td><td data-v="2016-05">May 2016</td><td><span class="status status-done">Completed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="next-step"><strong>Next development steps:</strong> FA Introduction to Coaching Football, then UEFA B.</p>
+      <div class="members"><span>FA registered coach</span><span>FA Coaches' Club member</span><span>Former: London Football Coaches Association</span><span>Former: Football Writers Association</span></div>
+    </div>
+
+    <div class="coaching-record">
+      <div class="record-heading"><div><p class="eyebrow">Coaching record</p><h3>Coaching experience, on the record.</h3></div><p>Experience across community football, education and player development environments.</p></div>
+      <div class="record-grid">
+        <article class="record-feature"><span class="record-number">01</span><h3>Arsenal Community Coach Development Programme 2026/27</h3><p>Volunteer coach, north London. Currently supporting primary schools delivery.</p><p class="record-note">Selected via assessment day, June 2026.</p></article>
+        <article class="record-feature"><span class="record-number">02</span><h3>Luton Town FC Foundation</h3><p>Four years across community coaching, schools and holiday provision.</p><p class="record-note">Bedfordshire and Luton community programmes.</p></article>
+      </div>
+      <div class="experience-list">
+        <div><span>01</span><p>Premier League Primary Stars delivery</p></div>
+        <div><span>02</span><p>FA RESPECT programme coaching</p></div>
+        <div><span>03</span><p>Women's football centre coaching</p></div>
+        <div><span>04</span><p>School-based coaching, curriculum PE and after-school clubs</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><a class="next-page" href="#method"><span class="np-k">Next</span><span class="np-t">Method and session lab <b>→</b></span><span class="np-s">Plan it. Play it. Progress.</span></a></div>
+</div>
+<div class="page" id="p-method" data-page="method" hidden>
+<section class="page-head"><div class="wrap"><p class="eyebrow">Method</p><h1 class="ph-title">How I <em>coach.</em></h1><p class="ph-intro">The session architecture I use in every setting, and a free AI session lab built on it.</p><div class="on-page"><span>On this page</span><a href="#method">Session architecture</a><a href="#lab">Session lab</a></div></div></section>
+<!-- METHOD + LAB -->
+<section class="method section" id="method" aria-labelledby="method-title">
+  <div class="wrap">
+    <div class="method-layout reveal">
+      <div class="method-copy">
+        <p class="eyebrow">The session architecture</p>
+        <h2 id="method-title">Plan it. Play it. Progress.</h2>
+        <p class="lead">Every session is written before delivery and reviewed afterwards. Plans go to the management team in advance, never improvised in the car park.</p>
+        <p>Sessions create repetition, decision-making and room for players to show what they understand. The paperwork supports the football, not the other way around.</p>
+        <p>The same plan adapts to a school hall, an estate pitch or an accessible session. And every review looks at impact, not just performance.</p>
+      </div>
+      <div class="timeline" aria-label="Example 90 minute training session">
+        <div class="timeline-head"><span>Phase</span><span>Time</span><span>Purpose</span></div>
+        <div class="row"><b>Arrival activity</b><time>10 min</time><div><p>Ball each from the first minute</p></div></div>
+        <div class="row"><b>Technical practice</b><time>15 min</time><div><p>Topic repetition under light pressure</p></div></div>
+        <div class="row"><b>Skill practice</b><time>20 min</time><div><p>Game-realistic picture</p></div></div>
+        <div class="row"><b>Small-sided game</b><time>25 min</time><div><p>Where the topic pays off</p></div></div>
+        <div class="row"><b>Conditioned game</b><time>15 min</time><div><p>Apply it without interference</p></div></div>
+        <div class="row"><b>Review</b><time>5 min</time><div><p>Player questions and message home</p></div></div>
+      </div>
+    </div>
+
+    <div class="lab" id="lab">
+      <form class="lab-form" id="plan-form">
+        <h3>Session lab</h3>
+        <p>Pick a format, an age group and a focus. The AI assistant writes a plan in this exact architecture.</p>
+        <div class="seg" role="group" aria-label="Format"><button type="button" id="fmt-comm" aria-pressed="true">School / community</button><button type="button" id="fmt-team" aria-pressed="false">Team</button><button type="button" id="fmt-one" aria-pressed="false">1-to-1</button></div>
+        <div class="two">
+          <label for="pf-age">Age group<select id="pf-age"><option>U7</option><option>U8</option><option>U9</option><option>U10</option><option selected>U11</option><option>U12</option><option>U13</option><option>U14</option><option>U15</option><option>U16</option><option>U18</option></select></label>
+          <label for="pf-min">Length<select id="pf-min"><option value="30">30 min</option><option value="45" selected>45 min</option><option value="60">60 min</option><option value="75">75 min</option><option value="90">90 min</option></select></label>
+        </div>
+        <label for="pf-focus">Focus<select id="pf-focus"><option>Girls' participation</option><option>Inclusive / mixed ability</option><option>Receiving and scanning</option><option>1v1 attacking</option><option>Finishing</option><option>First touch</option><option>Weak foot</option><option>Passing combinations</option><option>Pressing as a unit</option><option>Defending 1v1</option><option>Playing out from the back</option><option>Transitions</option></select></label>
+        <div class="two">
+          <label for="pf-players">Players<input id="pf-players" type="number" min="1" max="40" value="20"></label>
+          <label for="pf-space">Space<select id="pf-space"><option>Playground</option><option>Half pitch</option><option>Quarter pitch</option><option>Full pitch</option><option>Sports hall</option><option>Park or garden</option></select></label>
+        </div>
+        <label for="pf-notes">Anything else<textarea id="pf-notes" rows="2" placeholder="e.g. lunchtime club, mixed Year 3 and 4, some new to football"></textarea></label>
+        <button class="button button-primary" type="submit" id="pf-go">Build the plan <span>→</span></button>
+        <p class="form-status" id="pf-note"></p>
+      </form>
+      <div id="plan-out" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><a class="next-page" href="#one"><span class="np-k">Next</span><span class="np-t">1-to-1 <b>→</b></span><span class="np-s">Extra focus, one on one</span></a></div>
+</div>
+<div class="page" id="p-one" data-page="one" hidden>
+<section class="page-head"><div class="wrap"><p class="eyebrow">1-to-1</p><h1 class="ph-title">Extra focus. <em>One on one.</em></h1><p class="ph-intro">Private and small-group coaching that complements team, school and community football.</p></div></section>
+<!-- 1-TO-1 -->
+<section class="one section" id="one" aria-labelledby="one-title">
+  <div class="wrap one-layout reveal">
+    <div class="one-image">
+      <img src="img/heading.jpg" alt="Coach Thapelo in training, eyes on the ball" loading="lazy">
+      <span class="one-badge">1-to-1</span>
+      <div class="image-label">Private coaching <span>●</span></div>
+    </div>
+    <div class="one-copy">
+      <p class="eyebrow">Also available <i></i> 1-to-1 and small groups</p>
+      <h2 id="one-title">Your game. <em>Coached one on one.</em></h2>
+      <p class="lead">Extra focus that complements team, school and community football.</p>
+      <p>Each session starts with what the player needs and ends with something to practise before the next one.</p>
+      <div class="focus-grid">
+        <div><b>First touch</b><span>Receiving on the back foot, both feet</span></div>
+        <div><b>1v1 attacking</b><span>Feints, changes of pace, beating a defender</span></div>
+        <div><b>Finishing</b><span>Placement, first-time shots, composure</span></div>
+        <div><b>Scanning</b><span>Looking before the ball arrives</span></div>
+        <div><b>Weak foot</b><span>Passing and striking with both feet</span></div>
+        <div><b>Position work</b><span>What your role asks of you</span></div>
+        <div><b>Confidence</b><span>Decisions, mindset and matchday nerves</span></div>
+        <div><b>Trial prep</b><span>Getting ready to be watched</span></div>
+      </div>
+      <div class="formats">
+        <article><span class="k">Most popular</span><h3>1-to-1 session</h3><p>Coach and one player. Built on an opening assessment, with a homework drill every time.</p></article>
+        <article><span class="k">Friends and siblings</span><h3>Small group</h3><p>Two to four players of a similar age and level. More game-like practice.</p></article>
+        <article><span class="k">Best progress</span><h3>Development block</h3><p>A run of weekly sessions with a written plan and a progress review with parents.</p></article>
+      </div>
+      <div class="steps">
+        <div><span>01</span><div><b>Get in touch</b><p>The player's age, club level and what they want to work on.</p></div></div>
+        <div><span>02</span><div><b>Assessment session</b><p>Strengths first, then the two or three things that will make the biggest difference.</p></div></div>
+        <div><span>03</span><div><b>Development plan</b><p>Goals, session focus and what to practise alone, in writing.</p></div></div>
+        <div><span>04</span><div><b>Train and review</b><p>Weekly sessions, with progress shared with the player and parents.</p></div></div>
+      </div>
+      <div class="button-row">
+        <button class="button button-primary" type="button" id="book-one">Book an assessment <span>→</span></button>
+        <button class="button button-ghost" type="button" id="plan-one">Try a free 1-to-1 plan</button>
+      </div>
+      <p class="fine">Venue, times and rates confirmed when you get in touch. A parent or carer is present for under-18s.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><a class="next-page" href="#contact"><span class="np-k">Next</span><span class="np-t">Get in touch <b>→</b></span><span class="np-s">Schools, groups, clubs and families</span></a></div>
+</div>
+<div class="page" id="p-contact" data-page="contact" hidden>
+<!-- CONTACT + FOOTER -->
+<section class="contact section" id="contact" aria-labelledby="contact-title">
+  <div class="contact-art" aria-hidden="true"><img src="img/touchline.jpg" alt=""></div>
+  <div class="wrap contact-grid reveal">
+    <div>
+      <p class="eyebrow">Availability &amp; fit</p>
+      <h2 id="contact-title">Strengthen your team.<br><em>Support your community.</em></h2>
+      <p class="lead">I work with schools, community programmes and charities, clubs and families. For clubs, I can support an existing management team as an assistant coach, age-group lead or development squad coach, with U13 to U16 a particular focus. 1-to-1 and small-group coaching is also available.</p>
+      <p>Based in Luton and open to conversations across Bedfordshire, Hertfordshire and north London.</p>
+      <div class="contact-points"><span>UEFA C licensed</span><span>FA registered</span><span>Enhanced DBS held</span><span>Community and schools</span></div>
+      <div class="direct">
+        <div><small>Phone and WhatsApp</small><strong id="c-phone">+44 7365 447103</strong><span class="acts"><button class="button button-sm" type="button" data-copy="#c-phone">Copy</button><a class="button button-sm" href="https://wa.me/447365447103" target="_blank" rel="noopener">WhatsApp</a></span></div>
+        <div><small>Email</small><strong id="c-mail">thapelomoloantoa@yahoo.com</strong><span class="acts"><button class="button button-sm" type="button" data-copy="#c-mail">Copy</button></span></div>
+        <div><small>Website</small><strong>thapelomoloantoa.com</strong><span class="acts"><a class="button button-sm" href="https://thapelomoloantoa.com/home" target="_blank" rel="noopener">Visit</a></span></div>
+      </div>
+    </div>
+    <form class="enquiry-form" id="enq-form" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate><input type="hidden" name="form-name" value="enquiry"><p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+      <div class="form-heading"><h3>Start a conversation</h3><p>Tell me about your school, group, club or player. The assistant turns it into a clear message you can send by WhatsApp or email.</p></div>
+      <label for="enq-who">I am<select id="enq-who" name="who">
+        <option value="school">A school, camp or programme</option>
+        <option value="community">A community group or charity</option>
+        <option value="club">A club looking for a coach</option>
+        <option value="parent">A parent or carer</option>
+        <option value="player">A player</option>
+        <option value="one">Booking 1-to-1 coaching for a player</option>
+        <option value="media">A club or media brand (content)</option>
+      </select></label>
+      <label for="enq-name">Your name<input id="enq-name" name="name" autocomplete="name" required></label>
+      <label for="enq-contact">Your email or phone<input id="enq-contact" name="contact" autocomplete="email" required></label><label for="enq-org">Club or organisation<input id="enq-org" name="organisation" autocomplete="organization"></label>
+      <label for="enq-need">What would you like to discuss?<textarea id="enq-need" name="need" rows="3"></textarea></label>
+      <label for="enq-when">When and where<input id="enq-when" name="when" placeholder="e.g. Saturday mornings, Luton"></label>
+      <div class="btn-pair enq-top"><button class="button button-primary" type="submit" id="enq-ai">Draft with AI <span>→</span></button><button class="button button-dark" type="button" id="enq-plain">Write it plainly</button></div>
+      <div class="draft">
+        <label for="enq-out">Your message<textarea id="enq-out" name="message" placeholder="Your drafted message appears here. Edit it, then send."></textarea></label>
+        <div class="send-row"><button class="button button-primary" type="button" id="enq-send">Send enquiry</button><button class="button button-dark" type="button" id="enq-copy">Copy</button><a class="button button-dark" id="enq-wa" href="https://wa.me/447365447103" target="_blank" rel="noopener">WhatsApp <span>↗</span></a></div>
+        <p class="form-status" id="enq-status" aria-live="polite">Write it plainly or type your own message, then send it on WhatsApp or copy it into an email.</p>
+      </div>
+    </form>
+  </div>
+
+</section>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div><a class="footer-brand" href="#home"><img src="img/logo.webp" alt="Coach Thapelo" loading="lazy"></a><p>Purposeful coaching. Honest review.<br>Clear progress.</p></div>
+      <div><p class="footer-label">Explore</p><a href="#about">About</a><a href="#community">Community</a><a href="#experience">Credentials</a><a href="#method">Method</a><a href="#one">1-to-1</a><a href="#lab">Session lab</a><a href="#contact">Contact</a><a id="cdp-link-2" href="#journal">Journal</a></div>
+      <div><p class="footer-label">Based in</p><p>Luton, Bedfordshire<br>Working across the local game.</p><a href="https://wa.me/447365447103" target="_blank" rel="noopener">WhatsApp +44 7365 447103 ↗</a></div>
+      <div class="footer-badges"><span>UEFA C</span><span>FA registered</span><span>Enhanced DBS</span><span>Community coaching</span><span>#coachthapelo</span></div>
+    </div>
+    <div class="wrap legal"><span>© <span id="year"></span> Coach Thapelo · Thapelo Moloantoa</span><span>Plan It. Play It. Progress.</span><span>Programmes named for information only. No club endorsement implied.</span></div>
+  </footer>
+<!-- ASSISTANT -->
+<button class="fab" id="fab" type="button" aria-expanded="false" aria-controls="dock"><img src="img/logo.webp" alt=""><span>Ask Coach T</span><i id="live"></i></button>
+<div class="dock" id="dock" role="dialog" aria-label="Coach Thapelo's assistant" hidden>
+  <div class="dock-head"><img src="img/logo.webp" alt=""><div><b>Coach Thapelo AI</b><small id="live-t">Connecting</small></div><button class="x" id="close" type="button" aria-label="Close assistant">✕</button></div>
+  <div class="log" id="log" aria-live="polite"><div class="msg bot">Hi. Tell me who you are: a school, a community group, a club, a parent or a player. I can answer questions, build a session plan or write your enquiry.</div></div>
+  <div class="chips" id="dock-chips">
+    <button class="chip" type="button">What community work do you do?</button>
+    <button class="chip" type="button">Can you support our school?</button>
+    <button class="chip" type="button">Build a 45 min girls' lunchtime session</button>
+    <button class="chip" type="button">How does 1-to-1 work?</button>
+  </div>
+  <form id="chat-form"><label class="sr" for="chat-in">Message</label><input id="chat-in" autocomplete="off" placeholder="Ask a question"><button class="send" id="chat-send" type="submit">Send</button></form>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s), $$ = (s) => Array.from(document.querySelectorAll(s));
+  const el = (t, c, x) => { const n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ===== page router: one page at a time ===== */
+  const PAGES = Array.from(document.querySelectorAll(".page"));
+  const TITLES = { home: "Coach Thapelo", about: "About", community: "Community", journal: "Journal", experience: "Credentials", method: "Method", one: "1-to-1", contact: "Contact" };
+  function route() {
+    const id = decodeURIComponent((location.hash || "#home").slice(1)) || "home";
+    let target = document.getElementById(id);
+    if (id === "journal") target = document.getElementById("p-journal");
+    let page = target && (target.classList.contains("page") ? target : target.closest(".page"));
+    if (!page) {
+      const byKey = document.querySelector('.page[data-page="' + id + '"]');
+      page = byKey || document.getElementById("p-home"); target = null;
+    }
+    const changed = page.hidden;
+    PAGES.forEach((p) => (p.hidden = p !== page));
+    const key = page.dataset.page;
+    document.querySelectorAll("[data-nav]").forEach((a) => a.classList.toggle("active", a.dataset.nav === key));
+    page.querySelectorAll(".reveal").forEach((r) => r.classList.add("visible"));
+    const head = page.querySelector(".page-head");
+    const firstBody = head ? head.nextElementSibling : null;
+    const toTop = !target || target === page || target === firstBody || target.id === "home";
+    if (toTop) window.scrollTo(0, 0);
+    else { if (changed) window.scrollTo(0, 0); setTimeout(() => target.scrollIntoView({ behavior: changed ? "auto" : "smooth", block: "start" }), 30); }
+    document.title = key === "home" ? "Coach Thapelo" : TITLES[key] + " | Coach Thapelo";
+  }
+  window.navTo = (id) => { if (location.hash === "#" + id) route(); else location.hash = id; };
+  addEventListener("hashchange", route);
+  route();
+
+  /* header + menu (reference behaviour) */
+  const header = $(".site-header"), toggle = $(".menu-toggle"), nav = $(".nav-panel");
+  const upd = () => header.classList.toggle("scrolled", scrollY > 18); upd(); addEventListener("scroll", upd, { passive: true });
+  toggle.addEventListener("click", () => { const open = nav.classList.toggle("open"); toggle.setAttribute("aria-expanded", open); document.body.style.overflow = open ? "hidden" : ""; });
+  $$(".nav-panel a").forEach((a) => a.addEventListener("click", () => { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); document.body.style.overflow = ""; }));
+  $("#year").textContent = new Date().getFullYear();
+  if ("IntersectionObserver" in window) {
+    const ob = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }), { threshold: 0.08 });
+    $$(".reveal").forEach((r) => ob.observe(r));
+  } else $$(".reveal").forEach((r) => r.classList.add("visible"));
+
+  /* tickers */
+  const fill = (node, items) => { for (let k = 0; k < 2; k++) items.forEach((t) => node.append(el("span", null, t))); };
+  fill($("#ticker"), ["Community football", "UEFA C licensed", "FA registered", "Enhanced DBS", "Luton", "Bedfordshire", "Hertfordshire", "North London", "Schools and community", "1-to-1 coaching", "Plan it. Play it. Progress."]);
+  fill($("#giant"), ["Plan it", "Play it", "Progress", "Coach the player", "Back the person"]);
+
+  /* hero slider */
+  const hero = $(".hero"), slides = $$(".slide"), figs = $$(".hero-art figure"), dots = $$(".dot");
+  let idx = 0, timer = null; const DUR = 7000;
+  hero.style.setProperty("--dur", DUR + "ms");
+  function go(i) {
+    idx = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => { s.classList.toggle("on", k === idx); s.setAttribute("aria-hidden", String(k !== idx)); s.querySelectorAll("a,button").forEach((b) => (b.tabIndex = k === idx ? 0 : -1)); });
+    figs.forEach((f, k) => f.classList.toggle("on", k === idx));
+    dots.forEach((d, k) => { d.classList.remove("on", "done"); void d.offsetWidth; d.classList.toggle("on", k === idx); d.classList.toggle("done", k < idx); d.setAttribute("aria-selected", String(k === idx)); });
+    $("#cur").textContent = String(idx + 1).padStart(2, "0");
+    clearTimeout(timer); if (!reduce && !hero.classList.contains("paused")) timer = setTimeout(() => go(idx + 1), DUR);
+  }
+  dots.forEach((d, k) => d.addEventListener("click", () => go(k)));
+  $("#prev").onclick = () => go(idx - 1); $("#next").onclick = () => go(idx + 1);
+  hero.addEventListener("mouseenter", () => { hero.classList.add("paused"); clearTimeout(timer); });
+  hero.addEventListener("mouseleave", () => { hero.classList.remove("paused"); go(idx); });
+  let sx = null;
+  hero.addEventListener("touchstart", (e) => (sx = e.touches[0].clientX), { passive: true });
+  hero.addEventListener("touchend", (e) => { if (sx == null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) go(idx + (dx < 0 ? 1 : -1)); sx = null; });
+  document.addEventListener("visibilitychange", () => (document.hidden ? clearTimeout(timer) : go(idx)));
+  go(0);
+
+  /* sortable register */
+  const table = $(".credentials-table"), tbody = table.querySelector("tbody");
+  table.querySelectorAll("[data-sort]").forEach((b) => b.addEventListener("click", () => {
+    const col = Number(b.dataset.sort), asc = b.dataset.order !== "asc";
+    table.querySelectorAll("[data-sort]").forEach((x) => (x.dataset.order = "")); b.dataset.order = asc ? "asc" : "desc";
+    const key = (r) => { const c = r.cells[col]; return (c.dataset.v || c.innerText).trim().toLowerCase(); };
+    Array.from(tbody.rows).sort((a, c) => asc ? key(a).localeCompare(key(c)) : key(c).localeCompare(key(a))).forEach((r) => tbody.appendChild(r));
+  }));
+
+  /* knowledge */
+  const KB = `COACH THAPELO: FACTS YOU MAY STATE
+- IDENTITY: Thapelo Moloantoa, known as Coach Thapelo. A community football coach who uses the game to develop young people and communities; 1-to-1 coaching is one supporting offer. Based in Luton; works across Bedfordshire, Hertfordshire and north London. Born in Johannesburg, BaTaung heritage.
+- Qualifications: UEFA C Diploma (The FA, January 2023); FA Level 1 Award in Coaching Football (1st4sport, Bedfordshire FA, December 2017); The FA Playmaker (2022); EE Playmaker (England Football, 2025); Introduction to Talent Identification in Football (England Football Learning, 2021); Equality and Diversity (The FA, 2021); Football Digital Marketing and Social Media (Sports Business Institute Barcelona, 2016).
+- Compliance: FA coach registration current. Enhanced DBS received September 2026. FA Safeguarding Children completed September 2026. FA Introduction to First Aid in Football completed September 2026. FA Coaches' Club member. Certificate numbers on request.
+- Next development steps: FA Introduction to Coaching Football, then UEFA B.
+- CURRENT PROGRAMME 2026/27: volunteer coach on the Arsenal Community Coach Development Programme, a year-long programme (September 2026 to summer 2027) based at The Arsenal Hub, N7. Selected via assessment day on 23 June 2026. Weekly coach education mornings (Tuesday, Thursday, Friday) plus practical community placements. Half-term 1 placement: Primary Schools strand (Premier League Primary Stars), SUPPORTING delivery of girls' lunchtime clubs, football-focused learning and PE, and in-class teacher support, in primary schools across Islington and Camden. He observes and assists lead staff; he does not lead these sessions or run the programme. Since 22 September, every Tuesday he supports the women and girls lead coach at a primary school with a girls' lunchtime football club and two Year 6 PE lessons; the next step is planning and leading part of the lunchtime club, such as the arrival activity. Coach education so far: induction, session structure, small-sided game design and delivery (saved in the programme's Coaching Manual), introduction to delivering a coaching session, Stepping Over the Sidelines, identifying support needs and planning for differentiation (Angel Shed workshop), a primary school event, and a Primary Stars briefing on teacher support, football-focused learning and pupil questionnaires. Next: carousel and whole-part-whole session structures, a pre-academy visit, and a Black History Month primary school event. Placements rotate by half-term: social inclusion, health and accessibility, women and girls, grassroots football. Never name a school, pupil or staff member. Never say or imply that Arsenal endorses, employs or recommends him.
+- Four years with Luton Town FC Foundation: community coaching, schools and holiday provision; Premier League Primary Stars; FA RESPECT programme; women's football centre coaching; curriculum PE and after-school clubs.
+- Nine years reporting on South African professional football (PSL); founder of FullCircle Sport Online. Offers match review, player feedback, club communication, helping community projects capture and share their impact, and school visits on South African football heritage.
+- PRINCIPLES (his own): football as a vehicle for confidence, teamwork, communication, decision-making, literacy and wellbeing; everyone gets a game (girls and women, disabled players, older adults, people new to the country, young people on estates, beginners: adapt the activity, never exclude the person); community-led (go where people are, work with local partners and teachers, respect routines); support, don't take over (observe first, then add value); safe and professional (safeguarding first, boundaries, no unauthorised photos, concerns to the lead); plan, deliver, review and measure (attendance, feedback, pupil questionnaires); role model (punctual, reliable, approachable, communicates early); pathways (lunchtime club to team, drop-in to qualification, player to volunteer to coach); lifelong learner; girls' participation matters (belonging and confidence first, skill second).
+- Community groups: estates, inclusion and health projects, adult and walking football.
+- Availability for clubs: assistant coach, age-group lead or development squad coach, with U13 to U16 a particular focus.
+- 1-TO-1 COACHING (supporting offer): private sessions (coach and one player), small groups of 2 to 4, and development blocks of weekly sessions with a written plan and parent review. Process: get in touch, assessment session, development plan, train and review. Focus areas: first touch, 1v1 attacking, finishing, scanning, weak foot, position work, confidence, trial prep. Ages 6 to 18; a parent or carer present for under-18s.
+- Session architecture: Plan it. Play it. Progress. Arrival activity, technical practice, skill practice, small-sided game, conditioned game, review. Philosophy: players learn football by playing football; purpose before drills; game realism; clear communication (two questions for players, one message home).
+- Contact: phone and WhatsApp +44 7365 447103; email thapelomoloantoa@yahoo.com; website thapelomoloantoa.com.
+UNKNOWN: prices, availability dates, venues. Never invent them; say they are confirmed on enquiry.`;
+  const RULES = `You are the AI assistant on Coach Thapelo's website. Visitors are schools, community groups, clubs, parents, players or media brands. Lead with his community work; mention 1-to-1 when asked or when it fits.
+${KB}
+HOW TO WRITE: short lines, plain instruction, first person is not yours: refer to him as "Coach Thapelo" and the reader as "you". Never use em dashes. No markdown: no asterisks or headings; plain sentences and "- " bullets only. Under 110 words unless building something. Never claim anything outside the facts, never imply club endorsement.
+TOOLS: go_to_section to show a part of the page. show_session_plan for any session or drill plan (3 to 6 phases following his session architecture, minutes add to the total, one coaching point each; for 1-to-1 use coach-fed and coach-opposed practices and no team games; for school or community sessions keep everyone active, adapt for mixed ability, and for girls' sessions build belonging and confidence first), then reply in one line. draft_enquiry when they want to book or get in touch: a full first-person message from the visitor with [brackets] for unknowns, then tell them to send it by WhatsApp or email. set_audience when they say who they are.`;
+
+  /* audience */
+  const AUD = {
+    school: { title: "Schools and camps: structure you can see.", proof: ["Currently supporting primary school delivery: girls' lunchtime clubs, football-focused learning, PE and classroom support", "I support the class teacher and never take over", "Four years of Premier League Primary Stars, curriculum PE and after-school clubs", "Every child gets a game, whatever their ability", "School visits on South African football heritage"], chips: ["Can you support our school?", "Build a 45 min girls' lunchtime session", "What would a six-week after-school block look like?"] },
+    community: { title: "Community groups: everyone gets a game.", proof: ["I come to you: estates, parks and community centres", "Inclusion and health projects, including adult and walking football", "Girls-only and women's sessions that build belonging first", "Adapted, accessible sessions for disabled players and beginners", "Pathways from a drop-in to a team, a qualification or volunteering"], chips: ["What community work do you do?", "Build an inclusive mixed-ability session", "Draft an enquiry for a community project"] },
+    club: { title: "Clubs: a coach who strengthens your team.", proof: ["Available as assistant coach, age-group lead or development squad coach", "U13 to U16 a particular focus", "UEFA C licensed, FA registered, Enhanced DBS", "Sessions that include every player, written before delivery and shared with the management team"], chips: ["Is he available as an assistant coach?", "Show me a U14 pressing session plan", "What is his safeguarding status?"] },
+    parent: { title: "Parents: safe, seen and improving.", proof: ["Enhanced DBS received September 2026, safeguarding completed September 2026", "Sessions where every child is included, whatever their level", "Venue, time, kit and supervision confirmed in writing", "1-to-1 and small-group coaching also available"], chips: ["What should my child bring to a session?", "How does 1-to-1 work?", "Draft an enquiry for my 10 year old"] },
+    player: { title: "Players: something to try at training tonight.", proof: ["Scan twice before you receive the ball", "Practise alone: wall passes, weak foot first, ten minutes a day", "New to football? You still get a game", "1-to-1 sessions if you want extra focus"], chips: ["Give me a drill I can practise alone tonight", "How do I get better at 1v1s?", "What should a winger work on?"] },
+    media: { title: "Media: football judgement, delivered on time.", proof: ["Nine years reporting on South African professional football", "Founder of FullCircle Sport Online", "Helping community projects capture and share their impact", "Match review and player feedback from video"], chips: ["What content can Coach Thapelo produce?", "Draft a content partnership enquiry", "How does he use video review?"] }
+  };
+  let currentAud = "school";
+  function setAudience(key) {
+    const a = AUD[key]; if (!a) return false; currentAud = key;
+    $$(".tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.aud === key)));
+    $("#who-title").textContent = a.title;
+    $("#aud-proof").replaceChildren(...a.proof.map((p) => el("li", null, p)));
+    $("#aud-chips").replaceChildren(...a.chips.map((c) => { const b = el("button", "chip", c); b.type = "button"; b.onclick = () => { openDock(); send(c); }; return b; }));
+    if ([...$("#enq-who").options].some((o) => o.value === key)) $("#enq-who").value = key;
+    try { localStorage.setItem("ct-aud", key); } catch (e) {}
+    return true;
+  }
+  $$(".tab").forEach((t) => t.addEventListener("click", () => setAudience(t.dataset.aud)));
+  let saved = null; try { saved = localStorage.getItem("ct-aud"); } catch (e) {}
+  setAudience(AUD[saved] ? saved : "school");
+  $("#aud-enquire").onclick = () => { setAudience(currentAud); navTo("contact"); };
+
+  /* plan rendering in the reference timeline style */
+  const EXAMPLE = { title: "Girls' lunchtime club: confidence on the ball", ageGroup: "Years 3 and 4", minutes: 45, players: 20, space: "Playground", format: "community",
+    objective: "Every girl touches the ball often, tries something new and leaves wanting to come back next week.",
+    blocks: [
+      { name: "Arrival: ball each", minutes: 5, setup: "A ball each in a coned square. Dribble, stop on the whistle, swap balls with a partner.", coachingPoint: "Small touches, head up, say hello to someone new." },
+      { name: "Technical: traffic lights", minutes: 10, setup: "Green dribble, amber slow with the sole, red stop. Girls take turns calling the colours.", coachingPoint: "Keep the ball close so you can stop it." },
+      { name: "Skill: treasure island", minutes: 10, setup: "Teams dribble balls from the middle island to their base. Two friendly pirates try to tag the ball.", coachingPoint: "Look up, find space, go." },
+      { name: "Small-sided game", minutes: 15, setup: "Four games of 3v3 or 4v4 on small pitches. Everyone plays, no one sits out, bonus goal for a pass first.", coachingPoint: "Everyone gets a touch before we score." },
+      { name: "Review", minutes: 5, setup: "Circle up. Two questions, one shout-out each, one message home.", coachingPoint: "What did you try today that was new?" }
+    ],
+    parentNote: "Ask tonight: what did you try today that was new?" };
+  function renderPlan(p, opts = {}) {
+    const blocks = Array.isArray(p.blocks) ? p.blocks.filter((b) => b && b.name) : [];
+    if (!blocks.length) throw new Error("The plan had no blocks.");
+    const total = blocks.reduce((s, b) => s + (Number(b.minutes) || 0), 0) || Number(p.minutes) || 60;
+    const wrap = el("div");
+    const top = el("div", "plan-top"), tl = el("div");
+    tl.append(el("p", "eyebrow", opts.example ? "Example plan" : "Your session plan"), el("h3", null, String(p.title || "Session")));
+    const tags = el("div", "tags");
+    if (opts.example) tags.append(el("span", "ex", "Example"));
+    const pl = Number(p.players);
+    [p.ageGroup, total + " min", pl === 1 ? "1-to-1" : pl ? pl + " players" : null, p.space, p.format === "community" ? "School / community" : null].filter(Boolean).forEach((t) => tags.append(el("span", null, String(t))));
+    top.append(tl, tags); wrap.append(top);
+    if (p.objective) { const o = el("p", "plan-note"); o.style.margin = "0 0 14px"; o.textContent = String(p.objective); wrap.append(o); }
+    const bar = el("div", "bar"); bar.setAttribute("aria-hidden", "true");
+    blocks.forEach((b) => { const s = el("span"); s.style.flex = String(Number(b.minutes) || 1); bar.append(s); });
+    wrap.append(bar);
+    const t = el("div", "timeline");
+    const h = el("div", "timeline-head"); h.append(el("span", null, "Phase"), el("span", null, "Time"), el("span", null, "Purpose")); t.append(h);
+    blocks.forEach((b) => {
+      const r = el("div", "row"), d = el("div");
+      d.append(el("p", null, String(b.setup || "")));
+      if (b.coachingPoint) d.append(el("span", "cp", String(b.coachingPoint)));
+      r.append(el("b", null, String(b.name)), el("time", null, (Number(b.minutes) || 0) + " min"), d);
+      t.append(r);
+    });
+    wrap.append(t);
+    if (p.parentNote) { const n = el("p", "plan-note"); n.append(el("strong", null, "Message home: "), document.createTextNode(String(p.parentNote))); wrap.append(n); }
+    $("#plan-out").replaceChildren(wrap);
+    return { total };
+  }
+  renderPlan(EXAMPLE, { example: true });
+
+  let fmt = "community";
+  const FMT = { community: { btn: "#fmt-comm", players: 20, min: "45" }, team: { btn: "#fmt-team", players: 12, min: "60" }, one: { btn: "#fmt-one", players: 1, min: "45" } };
+  function setFormat(f) {
+    fmt = FMT[f] ? f : "community";
+    Object.entries(FMT).forEach(([k, v]) => $(v.btn).setAttribute("aria-pressed", String(k === fmt)));
+    $("#pf-players").value = FMT[fmt].players; $("#pf-min").value = FMT[fmt].min;
+  }
+  $("#fmt-comm").onclick = () => setFormat("community"); $("#fmt-team").onclick = () => setFormat("team"); $("#fmt-one").onclick = () => setFormat("one");
+  $("#plan-one").onclick = () => { setFormat("one"); $("#pf-focus").value = "Finishing"; navTo("lab"); };
+  $("#book-one").onclick = () => { $("#enq-who").value = "one"; navTo("contact"); setTimeout(() => $("#enq-name").focus({ preventScroll: true }), 600); };
+
+  /* Claude */
+  let sample = null, toolsOk = false, aiOff = false;
+  const ready = (async () => {
+    try { sample = window.claude && window.claude.use ? await window.claude.use("sample") : null; } catch (e) { sample = null; }
+    if (sample) { try { const l = await sample.limits(); toolsOk = !!(l && l.tools); } catch (e) {} $("#live").classList.add("on"); $("#live-t").textContent = "Online"; }
+    else setOffline();
+    return sample;
+  })();
+  function setOffline(msg) {
+    aiOff = true; document.documentElement.classList.add("no-ai");
+    $("#pf-note").textContent = msg || "The AI tools run when this page is opened in Claude. Message Coach Thapelo on WhatsApp instead.";
+    $("#live").classList.remove("on"); $("#live-t").textContent = "Offline";
+    ["#pf-go", "#enq-ai", "#chat-send", "#chat-in"].forEach((s) => ($(s).disabled = true));
+    $("#chat-in").placeholder = "Assistant offline. Use WhatsApp.";
+  }
+  function errCopy(e) {
+    const c = e && e.code;
+    if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(c)) { setOffline("The AI tools are switched off for this view. The rest of the page still works."); return "The assistant is switched off for this view."; }
+    if (c === "rate_limited") return "Too many requests right now. Try again in a minute.";
+    if (c === "session_expired") return "Sign in to Claude again, then retry.";
+    if (c === "refused") return "That one can't be answered here. Try asking another way.";
+    if (c === "prompt_too_large") return "That was too long. Try a shorter message.";
+    if (c === "invalid_json") return "The plan came back in the wrong shape. Press Build the plan to try again.";
+    return "Something interrupted the connection. Try again.";
+  }
+  function toast(t) { const n = $("#toast"); n.textContent = t; n.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => (n.hidden = true), 2200); }
+
+  /* lab */
+  $("#plan-form").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const s = await ready; if (!s || aiOff) return;
+    const r = { age: $("#pf-age").value, minutes: Number($("#pf-min").value), focus: $("#pf-focus").value, players: Math.max(1, Number($("#pf-players").value) || 12), space: $("#pf-space").value, notes: $("#pf-notes").value.trim().slice(0, 400) };
+    const one = fmt === "one" || r.players === 1, comm = fmt === "community" && !one;
+    const w = el("div", "working"); w.append(el("span", "pulse"), el("span", null, `Planning a ${r.minutes} minute ${one ? "1-to-1" : comm ? "school or community" : r.age} session on ${r.focus.toLowerCase()}...`));
+    const ctl = new AbortController(); const stop = el("button", "button button-sm button-ghost", "Stop"); stop.type = "button"; stop.style.marginLeft = "auto"; stop.onclick = () => ctl.abort(); w.append(stop);
+    $("#plan-out").replaceChildren(w); $("#pf-go").disabled = true;
+    const prompt = `${RULES}
+
+Write one football session plan in Coach Thapelo's session architecture.
+Format: ${one ? "1-to-1 private session: coach and one player only. Coach-fed, coach-opposed and target practices. No team games." : comm ? r.players + " participants, school or community session (for example a lunchtime club, PE lesson or community drop-in): mixed ages and abilities, everyone active, simple setup, nobody sits out, adapt the activity rather than exclude anyone. If the focus is girls' participation, build belonging and confidence first, skill second." : r.players + " players, team session."}
+Age group: ${r.age}. Total: ${r.minutes} minutes. Focus: ${r.focus}. Space: ${r.space}. Notes: ${r.notes || "none"}.
+Phases in order, choosing 4 to 6 of: arrival activity, technical practice, skill practice, small-sided game, conditioned game, review. Minutes add up to exactly ${r.minutes}. One short coaching point per phase. No em dashes.
+Reply with only JSON: {"title": string, "ageGroup": string, "minutes": number, "players": number, "space": string, "objective": string, "blocks": [{"name": string, "minutes": number, "setup": string, "coachingPoint": string}], "parentNote": string}`;
+    try { const plan = await s.json(prompt, { signal: ctl.signal }); if (plan && comm) plan.format = "community"; renderPlan(plan); }
+    catch (e) { if (e && e.code === "cancelled") renderPlan(EXAMPLE, { example: true }); else { const m = el("div", "working", errCopy(e)); $("#plan-out").replaceChildren(m); } }
+    finally { if (!aiOff) $("#pf-go").disabled = false; }
+  });
+
+  /* enquiry */
+  const F = () => ({ who: $("#enq-who").value, whoLabel: $("#enq-who").selectedOptions[0].textContent, name: $("#enq-name").value.trim(), org: $("#enq-org").value.trim(), need: $("#enq-need").value.trim(), when: $("#enq-when").value.trim() });
+  function plain(f) {
+    const L = ["Hi Coach Thapelo,", "", `My name is ${f.name || "[your name]"}${f.org ? " from " + f.org : ""}.`, ""];
+    if (f.who === "one") L.push("I'd like to book 1-to-1 coaching for [player's name], aged [age], who plays [position] at [club or level].", "");
+    if (f.who === "club") L.push("We're looking for coaching support for our [age group] team.", "");
+    if (f.who === "community") L.push("We run [project or group] for [who takes part] and are interested in football sessions for our community.", "");
+    L.push(`What I'd like to discuss: ${f.need || "[details]"}`, `When and where: ${f.when || "[days, times and area]"}`, "");
+    if (f.who === "one" || f.who === "parent") L.push("Could you let me know about an assessment session, venue, times and rates?", "");
+    if (f.who === "club" || f.who === "school" || f.who === "community") L.push("Could you share your availability and a sample session plan?", "");
+    if (f.who === "media") L.push("Could you share examples of your analysis and content work?", "");
+    L.push("Thanks,", f.name || "[your name]");
+    return L.join("\n");
+  }
+  const syncWa = () => { const v = $("#enq-out").value.trim(); $("#enq-wa").href = "https://wa.me/447365447103" + (v ? "?text=" + encodeURIComponent(v.slice(0, 1500)) : ""); };
+  $("#enq-out").addEventListener("input", syncWa);
+  $("#enq-plain").onclick = () => { $("#enq-out").value = plain(F()); syncWa(); };
+  $("#enq-form").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const s = await ready, f = F();
+    if (!s || aiOff) { $("#enq-out").value = plain(f); syncWa(); return; }
+    const ctl = new AbortController(); $("#enq-ai").disabled = true; $("#enq-out").value = "Drafting...";
+    const prompt = `${RULES}
+
+Write an enquiry message FROM this visitor TO Coach Thapelo. First person as the visitor, under 140 words, plain text, greeting and sign-off. Ask for the practical details this visitor needs. [Brackets] for missing details. No invented prices or dates.
+Visitor: ${f.whoLabel}. Name: ${f.name || "unknown"}. Club or organisation: ${f.org || "none"}. Wants to discuss: ${f.need || "not given"}. When and where: ${f.when || "not given"}.
+Reply with only the message.`;
+    try { await s(prompt, { signal: ctl.signal, modelTier: "quick", cache: false, onText: ({ text }) => { $("#enq-out").value = text; } }); }
+    catch (e) { $("#enq-out").value = e && e.text ? e.text : plain(f); if (e && e.code !== "cancelled") toast(errCopy(e)); }
+    finally { syncWa(); if (!aiOff) $("#enq-ai").disabled = false; }
+  });
+  async function copyText(t, node) {
+    try { await navigator.clipboard.writeText(t); toast("Copied"); }
+    catch (e) { if (node && node.select) { node.focus(); node.select(); } toast("Selected. Press Ctrl+C to copy"); }
+  }
+  $("#enq-send").onclick = async () => {
+    const f = $("#enq-form"), st = $("#enq-status");
+    if (!$("#enq-name").value.trim() || !$("#enq-contact").value.trim()) { st.textContent = "Add your name and an email or phone number so I can reply."; return; }
+    if (!$("#enq-out").value.trim()) $("#enq-out").value = plain(F());
+    $("#enq-send").disabled = true; st.textContent = "Sending...";
+    try {
+      const r = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(f)).toString() });
+      if (!r.ok) throw new Error(r.status);
+      st.textContent = "Sent. Thank you, I'll reply as soon as I can."; f.reset(); $("#enq-out").value = "";
+    } catch (e) { st.textContent = "That didn't send. Please use WhatsApp or email instead."; }
+    finally { $("#enq-send").disabled = false; }
+  };
+  $("#enq-copy").onclick = () => { const t = $("#enq-out"); if (!t.value.trim()) return toast("Draft a message first"); copyText(t.value, t); };
+  $$("[data-copy]").forEach((b) => (b.onclick = () => copyText($(b.dataset.copy).textContent.trim())));
+
+  /* chat dock */
+  const dock = $("#dock"), fab = $("#fab"), log = $("#log");
+  function openDock() { dock.hidden = false; fab.hidden = true; fab.setAttribute("aria-expanded", "true"); setTimeout(() => $("#chat-in").focus(), 50); }
+  function closeDock() { dock.hidden = true; fab.hidden = false; fab.setAttribute("aria-expanded", "false"); fab.focus(); }
+  fab.onclick = openDock; $("#close").onclick = closeDock;
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !dock.hidden) closeDock(); });
+  const note = (t) => { log.append(el("div", "msg act", "✓ " + t)); log.scrollTop = log.scrollHeight; };
+  const SECTIONS = { journal: "#journal", community: "#community", one: "#one", about: "#about", who: "#who", credentials: "#experience", media: "#media", method: "#method", lab: "#lab", contact: "#contact" };
+  const TOOLS = [
+    { name: "go_to_section", description: "Open a page of the site: journal (programme journal and session log), community (current 2026/27 programme and community work), one (1-to-1 coaching), about, who (audience guide), credentials, media (story and support tools), method, lab (session plans), contact.",
+      inputSchema: { type: "object", properties: { section: { type: "string", enum: Object.keys(SECTIONS) } }, required: ["section"] },
+      execute: (i) => { const s = SECTIONS[String(i.section)]; if (!s) throw new Error("Unknown section"); navTo(s.slice(1)); note("Opened " + String(i.section)); return "ok"; } },
+    { name: "set_audience", description: "Switch the audience guide to the visitor type: school, community, club, parent, player or media.",
+      inputSchema: { type: "object", properties: { audience: { type: "string", enum: Object.keys(AUD) } }, required: ["audience"] },
+      execute: (i) => { if (!setAudience(String(i.audience))) throw new Error("Unknown audience"); note("Page tailored for " + String(i.audience)); return "ok"; } },
+    { name: "show_session_plan", description: "Render a session plan in the Session lab using Coach Thapelo's phase architecture. players = 1 means 1-to-1. Returns total minutes shown.",
+      inputSchema: { type: "object", properties: { title: { type: "string" }, ageGroup: { type: "string" }, minutes: { type: "number" }, players: { type: "number" }, space: { type: "string" }, objective: { type: "string" },
+        blocks: { type: "array", items: { type: "object", properties: { name: { type: "string" }, minutes: { type: "number" }, setup: { type: "string" }, coachingPoint: { type: "string" } }, required: ["name", "minutes", "setup", "coachingPoint"] } },
+        parentNote: { type: "string" } }, required: ["title", "ageGroup", "blocks"] },
+      execute: (i) => { const r = renderPlan(i); navTo("lab"); note("Session plan added to the Session lab"); return { shown: true, totalMinutes: r.total }; } },
+    { name: "draft_enquiry", description: "Put a drafted enquiry into the contact form so the visitor can edit it and send it by WhatsApp or email. audience: school, community (group or charity), club, parent, player, one (1-to-1 booking), media.",
+      inputSchema: { type: "object", properties: { audience: { type: "string", enum: ["school", "community", "club", "parent", "player", "one", "media"] }, message: { type: "string" } }, required: ["message"] },
+      execute: (i) => { const a = String(i.audience || ""); if ([...$("#enq-who").options].some((o) => o.value === a)) $("#enq-who").value = a; $("#enq-out").value = String(i.message || ""); syncWa(); navTo("contact"); note("Enquiry drafted in Get in touch"); return "ok"; } }
+  ];
+  let turns = [], busy = false;
+  async function send(text) {
+    text = String(text || "").trim(); if (!text || busy) return;
+    const s = await ready;
+    if (!s || aiOff) { log.append(el("div", "msg bot", "The assistant is offline here. Message Coach Thapelo on WhatsApp: +44 7365 447103.")); return; }
+    busy = true; $("#chat-send").disabled = true; $("#dock-chips").hidden = true;
+    log.append(el("div", "msg me", text)); turns.push({ role: "user", content: text });
+    const bubble = el("div", "msg bot", "Thinking..."); log.append(bubble); log.scrollTop = log.scrollHeight;
+    const opts = { signal: new AbortController().signal, modelTier: "quick", onText: ({ text }) => { bubble.textContent = text.replace(/\*\*/g, "").replace(/\u2014/g, ", "); log.scrollTop = log.scrollHeight; } };
+    if (toolsOk) opts.tools = TOOLS; else opts.cache = false;
+    const hist = turns.slice(-12); while (hist.length && hist[0].role !== "user") hist.shift();
+    try {
+      const { text: a } = await s([{ role: "user", content: RULES + "\n\nContext: the visitor is viewing the '" + currentAud + "' guide." }, ...hist], opts);
+      turns.push({ role: "assistant", content: a });
+    } catch (e) {
+      if (e && e.code === "refused") bubble.textContent = errCopy(e);
+      else if (e && e.text) { bubble.textContent = e.text; turns.push({ role: "assistant", content: e.text }); note(errCopy(e)); }
+      else bubble.textContent = errCopy(e);
+    } finally { busy = false; if (!aiOff) $("#chat-send").disabled = false; log.scrollTop = log.scrollHeight; }
+  }
+  $("#chat-form").addEventListener("submit", (e) => { e.preventDefault(); const v = $("#chat-in").value; $("#chat-in").value = ""; send(v); });
+  $$("#dock-chips .chip").forEach((b) => (b.onclick = () => send(b.textContent)));
+})();
+</script>
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s), $$ = (s) => Array.from(document.querySelectorAll(s));
+  const el = (t, c, x) => { const n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
+  const TYPES = { coached: "Coach education", pitch: "On the pitch", workshop: "Workshop", schools: "Schools", assignment: "Assignment" };
+  const LOG = [
+    { d: "2026-09-01", t: "Induction day", n: "Full induction timetable. Session Reflection Form introduced.", k: "coached" },
+    { d: "2026-09-02", t: "Challenge day", n: "Engagement challenge. AM, The Hub.", k: "workshop" },
+    { d: "2026-09-03", t: "Induction week session", n: "9.30am, The Hub.", k: "coached" },
+    { d: "2026-09-04", t: "Induction week, day four", n: "Close of the first week.", k: "coached" },
+    { d: "2026-09-07", t: "Week 2 begins", n: "11.00am start.", k: "coached" },
+    { d: "2026-09-08", t: "Small-sided games: introduction", n: "Why small-sided games, and what they are for.", k: "coached" },
+    { d: "2026-09-09", t: "Pitch session: designing small-sided games with outcomes in mind", n: "12.00pm to 3.00pm, The Hub.", k: "pitch" },
+    { d: "2026-09-10", t: "Footgolf morning: links to coaching and gamification", n: "10.00am, London Footgolf Centre, Barnet.", k: "pitch" },
+    { d: "2026-09-11", t: "Assignment 1 set: small-sided game design", n: "Designed in pairs.", k: "assignment" },
+    { d: "2026-09-14", t: "Coach education: session structure", n: "9.30am to 11.00am, The Hub.", k: "coached" },
+    { d: "2026-09-15", t: "Assignment 1 submitted: small-sided game design", n: "9.30am to 11.00am, The Hub.", k: "assignment" },
+    { d: "2026-09-16", t: "Stepping Over the Sidelines workshop", n: "Full-day workshop.", k: "workshop" },
+    { d: "2026-09-17", t: "Small-sided games delivery", n: "Coaches deliver their own designed games. 10.00am to 12.00pm, Market Road, N7.", k: "pitch" },
+    { d: "2026-09-18", t: "Introduction to delivering a coaching session", n: "Building on Stepping Over the Sidelines. 9.00am to 12.00pm, The Hub.", k: "coached" },
+    { d: "2026-09-21", t: "Premier League Primary Stars coach briefing", n: "Our role in schools: support the lead coach and class teacher. Teacher support versus football-focused learning, pupil questionnaires, arriving with DBS and photo ID.", k: "coached" },
+    { d: "2026-09-21", t: "Timetable update: inclusive formats", n: "Visually impaired and blind football sessions added.", k: "coached" },
+    { d: "2026-09-22", t: "Identifying support needs and behaviours", n: "Workshop with Angel Shed on planning for differentiation. 9.00am to 11.00am, The Hub.", k: "workshop" },
+    { d: "2026-09-22", t: "Weekly primary school placement begins", n: "Every Tuesday, supporting the women and girls lead coach: a girls' lunchtime football club and two Year 6 PE lessons. Week one is observing and getting to know the pupils.", k: "schools" },
+    { d: "2026-09-24", t: "Small-sided games: remaining deliveries", n: "10.00am to 12.00pm, Market Road, N7. Every game now saved in the programme's Coaching Manual.", k: "pitch" },
+    { d: "2026-09-25", t: "Primary school event", n: "Year 3 and 4 pupils: pitch activities, stadium tour and workshop rotation. Lots of football, lots of goals, and great feedback from pupils and staff.", k: "schools" }
+  ];
+  const NEXT = [
+    { d: "2026-09-29", t: "Coach education: session structure, then school placement", n: "Carousel and whole-part-whole. Then the girls' lunchtime club, where the next step is planning and leading part of it, such as the arrival activity." },
+    { d: "2026-09-30", t: "Pre-academy visit", n: "4.00pm to 6.30pm" },
+    { d: "2026-10-01", t: "Coach education: planning my own session", n: "Using carousel or whole-part-whole." },
+    { d: "2026-10-02", t: "Primary school event: Black History Month", n: "Evening: a tournament at the Hub, 5.00pm to 8.30pm, with volunteers needed for refereeing, fixtures and results." },
+    { d: "2026-10-04", t: "Love U Bro: men's mental health in the community", n: "Arsenal in the Community and Islington Council, Emirates Stadium, 9.30am to 12.30pm. Spaces offered to the CDP group." }
+  ];
+  const D = (s) => new Date(s + "T12:00:00");
+  const day = (s) => D(s).toLocaleDateString("en-GB", { weekday: "short" });
+  const dm = (s) => D(s).toLocaleDateString("en-GB", { day: "2-digit", month: "short" });
+  const monday = (s) => { const x = D(s); x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); return x.toISOString().slice(0, 10); };
+  const weeks = []; LOG.forEach((e) => { const w = monday(e.d); let g = weeks.find((x) => x.w === w); if (!g) weeks.push(g = { w, items: [] }); g.items.push(e); });
+  const WEEK_NAMES = ["Induction", "Small-sided games", "Session structure and delivery", "Inclusion and the school placement"];
+
+  /* stats */
+  const count = (k) => LOG.filter((e) => e.k === k).length;
+  [[LOG.length, "Sessions logged"], [count("coached") + count("workshop"), "Coach ed and workshops"], [count("pitch") + count("schools"), "Pitch and school days"], [weeks.length, "Weeks completed"]]
+    .forEach(([n, l]) => { const d = el("div"); d.append(el("b", null, String(n).padStart(2, "0")), el("span", null, l)); $("#j-stats").append(d); });
+
+  function renderLog(f) {
+    const out = $("#j-weeks"); out.replaceChildren();
+    weeks.forEach((g, i) => {
+      const items = g.items.filter((e) => f === "all" || e.k === f); if (!items.length) return;
+      const w = el("details", "week"), h = el("summary", null, "Week " + (i + 1) + ": " + (WEEK_NAMES[i] || "Programme")); h.append(el("small", null, "w/c " + dm(g.w))); w.append(h);
+      const list = el("div", "entries");
+      items.forEach((e) => {
+        const r = el("div", "entry"), tm = el("time"); tm.dateTime = e.d; tm.append(el("small", null, day(e.d)), document.createTextNode(dm(e.d)));
+        const body = el("div"); body.append(el("b", null, e.t)); if (e.n) body.append(el("p", null, e.n));
+        r.append(tm, body, el("span", "jtag " + e.k, TYPES[e.k])); list.append(r);
+      });
+      w.open = f !== "all" || i === weeks.length - 1; h.append(el("em", "wk-n", items.length + (items.length === 1 ? " session" : " sessions"))); w.append(list); out.append(w);
+    });
+  }
+  $$("#j-filters button").forEach((b) => b.addEventListener("click", () => { $$("#j-filters button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); renderLog(b.dataset.f); }));
+  renderLog("all");
+
+  /* upcoming: hides dates that have passed */
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const future = NEXT.filter((e) => D(e.d) >= today);
+  if (future.length) future.forEach((e) => { const r = el("div"), tm = el("time"); tm.dateTime = e.d; tm.append(el("small", null, day(e.d)), document.createTextNode(dm(e.d))); const b = el("div"); b.append(el("b", null, e.t)); if (e.n) b.append(el("p", null, e.n)); b.querySelector("p") && (b.querySelector("p").style.margin = "3px 0 0"); r.append(tm, b); $("#j-upcoming").append(r); });
+  else { const r = el("div"); r.append(el("p", "soon", "The next block of sessions will be added after the weekly recap.")); $("#j-upcoming").append(r); }
+
+  /* reflection helper */
+  weeks.forEach((g, i) => { const o = el("option", null, "Week " + (i + 1) + ": " + (WEEK_NAMES[i] || "") + " (w/c " + dm(g.w) + ")"); o.value = String(i); $("#rf-week").append(o); });
+  $("#rf-week").value = String(weeks.length - 1);
+  const toast = (t) => { const n = $("#toast"); n.textContent = t; n.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => (n.hidden = true), 2200); };
+  function blank(i) {
+    const g = weeks[i]; const L = ["Week " + (i + 1) + " reflection (w/c " + dm(g.w) + ")", ""];
+    g.items.forEach((e) => L.push(dm(e.d) + ", " + e.t, "What went well: [ ]", "Even better if: [ ]", "Next step: [ ]", ""));
+    L.push("One thing I'll use in my own community coaching: [ ]"); return L.join("\n");
+  }
+  $("#rf-plain").onclick = () => { $("#rf-out").value = blank(Number($("#rf-week").value)); };
+  $("#rf-copy").onclick = async () => { const t = $("#rf-out"); if (!t.value.trim()) return toast("Draft something first"); try { await navigator.clipboard.writeText(t.value); toast("Copied"); } catch (e) { t.focus(); t.select(); toast("Selected. Press Ctrl+C"); } };
+  let sample = null, off = false;
+  const ready = (async () => { try { sample = window.claude && window.claude.use ? await window.claude.use("sample") : null; } catch (e) { sample = null; } if (!sample) goOff(); return sample; })();
+  function goOff(m) { off = true; document.documentElement.classList.add("no-ai"); $("#rf-go").disabled = true; $("#rf-note").textContent = m || "The AI helper runs when this page is opened in Claude. The blank template works anywhere."; }
+  $("#rf-form").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const s = await ready, i = Number($("#rf-week").value), g = weeks[i];
+    if (!s || off) { $("#rf-out").value = blank(i); return; }
+    $("#rf-go").disabled = true; $("#rf-out").value = "Thinking...";
+    const prompt = `You help a volunteer community football coach (UEFA C, on a year-long community coach development programme) prepare a written weekly reflection for his Session Reflection Form.
+Week ${i + 1} sessions:
+${g.items.map((e) => "- " + dm(e.d) + ": " + e.t + (e.n ? " (" + e.n + ")" : "")).join("\n")}
+Focus: ${$("#rf-focus").value}.
+Write a reflection FRAMEWORK in British English, plain text, no markdown, no em dashes. For each session give one short sentence on what the session was for, then 2 or 3 specific reflective questions, with [brackets] where he writes his own observations. Do NOT invent what happened, how he felt, or any outcomes. Do not name schools, pupils or staff. End with one line linking the week to his community coaching, as a question. Under 300 words.`;
+    try { await s(prompt, { modelTier: "quick", cache: false, onText: ({ text }) => { $("#rf-out").value = text; } }); }
+    catch (e) {
+      const c = e && e.code;
+      if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(c)) goOff("The AI helper is switched off for this view. Use the blank template.");
+      $("#rf-out").value = e && e.text ? e.text : blank(i);
+      if (c && c !== "cancelled") toast(c === "rate_limited" ? "Too many requests. Try again shortly" : "Used the blank template instead");
+    } finally { if (!off) $("#rf-go").disabled = false; }
+  });
+})();
+</script>
+
+</body>
+</html>
