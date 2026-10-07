@@ -543,8 +543,8 @@ h1 em,h2 em{color:var(--red);font-style:normal}
 .send-row .button{margin-top:10px!important;padding-inline:10px}
 @media(max-width:480px){.send-row{grid-template-columns:1fr}}
 .hp{position:absolute;left:-9999px}
-#enq-send{display:none!important}
-.send-row{grid-template-columns:1fr 1fr}
+html:not(.has-form) #enq-send{display:none!important}
+html:not(.has-form) .send-row{grid-template-columns:1fr 1fr}
 </style>
 </head>
 <body>
@@ -1390,13 +1390,22 @@ Reply with only the message.`;
     try { await navigator.clipboard.writeText(t); toast("Copied"); }
     catch (e) { if (node && node.select) { node.focus(); node.select(); } toast("Selected. Press Ctrl+C to copy"); }
   }
+  /* Formspree: paste the form ID (the part after formspree.io/f/) between the quotes to switch on Send enquiry */
+  const FORMSPREE_ID = "";
+  if (FORMSPREE_ID) { document.documentElement.classList.add("has-form"); $("#enq-status").textContent = "Write it plainly or type your own message, then press Send enquiry. It goes straight to Coach Thapelo's inbox."; }
   $("#enq-send").onclick = async () => {
     const f = $("#enq-form"), st = $("#enq-status");
     if (!$("#enq-name").value.trim() || !$("#enq-contact").value.trim()) { st.textContent = "Add your name and an email or phone number so I can reply."; return; }
     if (!$("#enq-out").value.trim()) $("#enq-out").value = plain(F());
     $("#enq-send").disabled = true; st.textContent = "Sending...";
     try {
-      const r = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(f)).toString() });
+      const fd = new FormData(f);
+      if (fd.get("bot-field")) throw new Error("spam");
+      fd.delete("bot-field"); fd.delete("form-name");
+      const contact = String(fd.get("contact") || "");
+      if (contact.includes("@")) fd.set("_replyto", contact);
+      fd.set("_subject", "Website enquiry from " + (fd.get("name") || "a visitor") + " (" + $("#enq-who").selectedOptions[0].textContent + ")");
+      const r = await fetch("https://formspree.io/f/" + FORMSPREE_ID, { method: "POST", headers: { Accept: "application/json" }, body: fd });
       if (!r.ok) throw new Error(r.status);
       st.textContent = "Sent. Thank you, I'll reply as soon as I can."; f.reset(); $("#enq-out").value = "";
     } catch (e) { st.textContent = "That didn't send. Please use WhatsApp or email instead."; }
