@@ -1391,7 +1391,7 @@ Reply with only the message.`;
     catch (e) { if (node && node.select) { node.focus(); node.select(); } toast("Selected. Press Ctrl+C to copy"); }
   }
   /* Formspree: paste the form ID (the part after formspree.io/f/) between the quotes to switch on Send enquiry */
-  const FORMSPREE_ID = "";
+  const FORMSPREE_ID = "xnpjjbbl";
   if (FORMSPREE_ID) { document.documentElement.classList.add("has-form"); $("#enq-status").textContent = "Write it plainly or type your own message, then press Send enquiry. It goes straight to Coach Thapelo's inbox."; }
   $("#enq-send").onclick = async () => {
     const f = $("#enq-form"), st = $("#enq-status");
